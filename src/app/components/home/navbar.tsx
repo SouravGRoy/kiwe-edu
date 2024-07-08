@@ -92,7 +92,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.6 }}
-            className="lg:hidden absolute font-montserrat font-bold text-xl top-16 justify-center w-full py-8 bg-primary flex flex-col items-center space-y-4 mt-2"
+            className="lg:hidden absolute z-30 font-montserrat font-bold text-xl top-16 justify-center w-full py-8 bg-primary  flex flex-col items-center space-y-4 mt-2"
           >
             <Link
               href="/aboutUs"
