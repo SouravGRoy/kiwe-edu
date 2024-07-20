@@ -6,7 +6,6 @@ import { FaInstagram } from "react-icons/fa";
 
 import { FiMenu } from "react-icons/fi";
 import { PiPhoneCallFill } from "react-icons/pi";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -18,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full font-montserrat">
+    <div className="w-full font-montserrat ">
       {/* Top bar */}
       <div className="bg-gray-900 md:flex text-white hidden justify-around items-center px-4 py-2 text-sm">
         <div>Call +44 300 303 0266</div>
@@ -33,34 +32,60 @@ export default function Navbar() {
         <div className="flex space-x-4">kiwe@gmail.com</div>
       </div>
       {/* Main navbar */}
-      <div className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className=" bg-gradient-to-r dark:to-white from-[#1A1A5E]  dark:from-background  shadow-sm">
+        <div className="container mx-auto px-4 md:py-2 py-5 flex justify-between items-center">
           {/* Logo */}
-          <Link href={"/"} className="flex items-center space-x-2">
+          <Link href={"/"} className="flex  items-center md:space-x-2">
             <Image
-              src="/images/cloudX.png"
+              src="/images/logoX.png"
               alt="Academist"
-              width={50}
-              height={50}
-              className="rounded-full"
+              width={100}
+              height={100}
+              className="md:w-48"
             />
-            <span className="font-bold text-xl">Kiwe</span>
           </Link>
           {/* Links */}
           <div className="hidden font-semibold lg:flex space-x-12">
-            <Link href="/aboutUs" className="text-black hover:text-red-500">
+            <Link
+              href="/aboutUs"
+              className="text-black active:text-primary hover:text-red-500"
+            >
               About
             </Link>
-            <Link href="/coursesUs" className="text-black hover:text-red-500">
+            <Link
+              href="/coursesUs"
+              className="text-black active:text-primary hover:text-red-500"
+            >
               Courses Lists
             </Link>
-            <Link href="/servicesUs" className="text-black hover:text-red-500">
+            <Link
+              href="/servicesUs"
+              className="text-black active:text-primary hover:text-red-500"
+            >
               Services
             </Link>
-            <Link href="/gallaryUs" className="text-black hover:text-red-500">
+            <Link
+              href="/coursesUs"
+              className="text-black active:text-primary hover:text-red-500"
+            >
+              Hostel
+            </Link>
+            <Link
+              href="/servicesUs"
+              className="text-black active:text-primary hover:text-red-500"
+            >
+              Testimonial
+            </Link>
+            <Link
+              href="/gallaryUs"
+              className="text-black active:text-primary hover:text-red-500"
+            >
               Gallary
             </Link>
-            <Link href="/contactUs" className="text-black hover:text-red-500">
+            <Link
+              href="/contactUs"
+              className="text-black active:text-primary hover:text-red-500"
+            >
               Apply Now
             </Link>
           </div>
@@ -71,7 +96,7 @@ export default function Navbar() {
               href={"/contactUs"}
             >
               {" "}
-              <h1 className="text-md mx-1">Contact Us:</h1>
+              <h1 className="md:text-base text-xs  mx-1">Contact Us:</h1>
               <div className="relative">
                 <PiPhoneCallFill className="text-xl" />
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">
@@ -92,7 +117,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.6 }}
-            className="lg:hidden absolute z-30 font-montserrat font-bold text-xl top-16 justify-center w-full py-8 bg-primary  flex flex-col items-center space-y-4 mt-2"
+            className="lg:hidden absolute z-30 font-montserrat font-bold text-xl top-20 justify-center w-full py-8 bg-primary  flex flex-col items-center space-y-4 mt-2"
           >
             <Link
               href="/aboutUs"
@@ -105,6 +130,18 @@ export default function Navbar() {
               className="text-black underline hover:text-red-500"
             >
               Courses Lists
+            </Link>
+            <Link
+              href="/servicesUs"
+              className="text-black underline hover:text-red-500"
+            >
+              Hostel
+            </Link>
+            <Link
+              href="/gallaryUs"
+              className="text-black underline hover:text-red-500"
+            >
+              Testimonial
             </Link>
             <Link
               href="/servicesUs"

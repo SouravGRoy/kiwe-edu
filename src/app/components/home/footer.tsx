@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -83,34 +84,49 @@ const Footer = () => {
           {/* Support Section */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h4 className="text-xl font-bold mb-4">Support :</h4>
-            <ul>
-              <li className="mb-2">About Us</li>
-              <li className="mb-2">Registration</li>
-              <li className="mb-2">Available Courses</li>
-              <li className="mb-2">Become An Instructor</li>
-              <li className="mb-2">Events</li>
-            </ul>
+            <div className="flex flex-col">
+              <Link href="/about" className="mb-2  hover:text-red-500">
+                About Us
+              </Link>
+              <Link href="/contactUs" className="mb-2  hover:text-red-500">
+                Registration
+              </Link>
+              <Link href="/coursesUs" className="mb-2  hover:text-red-500">
+                Available Courses
+              </Link>
+              <Link href="/servicesUs" className="mb-2  hover:text-red-500">
+                Become An Instructor
+              </Link>
+              <Link href="/contactUs" className="mb-2  hover:text-red-500">
+                Events
+              </Link>
+            </div>
           </div>
 
           {/* Flexible Learning Section */}
           <div className="w-full md:w-1/4">
-            <h4 className="text-xl font-bold mb-4">Flexible learning -</h4>
+            <h4 className="text-xl md:hidden block font-bold mb-4">
+              Flexible learning -
+            </h4>
             <div className="flex items-center justify-center">
-              <Image
-                src={"/images/map.png"}
-                width={100}
-                height={100}
-                alt="Map"
-                className="w-full h-auto"
-              />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.8965430289413!2d88.41390641184918!3d26.747677367065005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e44138ad010df7%3A0xfcf7f42f340274c3!2sDNAtoms%20institute!5e0!3m2!1sen!2sin!4v1721408556626!5m2!1sen!2sin"
+                width="600"
+                height="220"
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </div>
 
         <div className="flex justify-between items-center mt-8 border-t border-gray-700 pt-4">
           <p className="text-sm">
-            &copy; 2018 Qode Interactive, All Rights Reserved
+            &copy; Made with ❤️ by kíwë media -{" "}
+            <Link href={"www.kiwemedia.com"} className="text-red-500 underline">
+              www.kiwemedia.com
+            </Link>
           </p>
+
           <div className="flex items-center">
             <div className="flex space-x-2">
               <a href="#" className="text-gray-400 hover:text-white">
