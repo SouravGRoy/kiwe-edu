@@ -26,7 +26,7 @@ export default function LandingGallary() {
                   href="/"
                   className="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 "
                 >
-                  Gallary
+                  Gallery
                 </a>
               </div>
             </div>
@@ -40,7 +40,7 @@ export default function LandingGallary() {
         </button>
       </div>
       <h2 className="text-4xl font-semibold text-center md:mb-8">
-        Our Gallary from your Perspective
+        Our Gallery from your Perspective
       </h2>
     </div>
   );

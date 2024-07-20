@@ -80,7 +80,7 @@ export default function Navbar() {
               href="/gallaryUs"
               className="text-black active:text-primary hover:text-red-500"
             >
-              Gallary
+              Gallery
             </Link>
             <Link
               href="/contactUs"
@@ -153,7 +153,7 @@ export default function Navbar() {
               href="/gallaryUs"
               className="text-black underline hover:text-red-500"
             >
-              Gallary
+              Gallery
             </Link>
             <Link
               href="/contactUs"

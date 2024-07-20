@@ -13,7 +13,7 @@ export default function FinalLanding() {
 
   return (
     <div>
-      <div className="flex flex-row font-montserrat md:px-16 mb-20 md:-mb-20 bg-gradient-to-b from-primary/100 to-transparent bg-cover bg-right md:bg-center justify-between w-full md:h-screen">
+      <div className="flex flex-row font-montserrat md:px-16 mb-20 md:-mb-20 bg-gradient-to-b from-primary/100 to-transparent bg-cover bg-right md:bg-center md:justify-between justify-center w-full md:h-screen">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
@@ -23,17 +23,15 @@ export default function FinalLanding() {
           <div className="rounded-full bg-white mb-6 flex px-2 py-1 shadow-md">
             <div className="rounded-full md:w-2 md:h-2 w-1 h-1 my-2 mr-1 bg-green-300"></div>
             <p className="text-sm md:text-base text-slate-400">
-              Live Coaching and Online courses
+              Preimium Class with Absolute faculty
             </p>
           </div>
-          <h1 className="md:text-5xl text-4xl mb-2 font-bold">
-            Siliguri&apos;s 1st
-          </h1>
+          <h1 className="md:text-5xl text-4xl mb-2 font-bold">DNAtom&apos;s</h1>
           <p className="text-secondary font-bold text-4xl md:text-5xl">
-            Next-Gen College
+            Institute
           </p>
-          <p className="mt-2 text-xs text-start md:text-md">
-            Access to 50+ modern degrees and job-oriented courses.
+          <p className="mt-2 text-sm text-start md:text-md">
+            "Inspiring excellence through innovative education."
           </p>
           <div className="mt-8 flex space-x-3 px-2 z-30">
             <Button
