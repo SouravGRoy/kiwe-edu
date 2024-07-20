@@ -17,7 +17,7 @@ export default function FinalLanding() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.9 }}
           className="flex flex-col items-center md:py-32 pt-16 text-center z-20"
         >
           <div className="rounded-full bg-white mb-6 flex px-2 py-1 shadow-md">
