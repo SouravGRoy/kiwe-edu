@@ -23,7 +23,7 @@ export default function FinalLanding() {
           <div className="rounded-full bg-white mb-6 flex px-2 py-1 shadow-md">
             <div className="rounded-full md:w-2 md:h-2 w-1 h-1 my-2 mr-1 bg-green-300"></div>
             <p className="text-sm md:text-base text-slate-400">
-              Preimium Class with Absolute faculty
+              Premium Class with Absolute faculty
             </p>
           </div>
           <h1 className="md:text-5xl text-4xl mb-2 font-bold">DNAtom&apos;s</h1>
@@ -31,7 +31,7 @@ export default function FinalLanding() {
             Institute
           </p>
           <p className="mt-2 text-sm text-start md:text-md">
-            "Inspiring excellence through innovative education."
+            &quot;Inspiring excellence through innovative education.&quot;
           </p>
           <div className="mt-8 flex space-x-3 px-2 z-30">
             <Button
