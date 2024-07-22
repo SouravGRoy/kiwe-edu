@@ -4,39 +4,81 @@ import Image from "next/image";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    name: "Gaurav Pradhan",
+    username: "92.20%",
+    body: "St. Joseph's School North Point Darjeeling",
     img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
+    name: "Yash Prasad",
+    username: "90.4%",
+    body: "Delhi Public School Siliguri",
     img: "https://avatar.vercel.sh/jill",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Anshuman Limbu",
+    username: "86.75%",
+    body: "Vidya Vikash Academy School Darjeeling",
     img: "https://avatar.vercel.sh/john",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Ankur Kumar",
+    username: "85%",
+    body: "Woodridge International School Siliguri",
     img: "https://avatar.vercel.sh/jane",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "Ellora Gupta",
+    username: "84.5%",
+    body: "St. Joseph's High School Siliguri",
+    img: "https://avatar.vercel.sh/james",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Aditya Ghosh",
+    username: "94%%",
+    body: "Mahbert High School Siliguri",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Shanvi Rauth",
+    username: "92%",
+    body: "Mahbert High School Siliguri",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Deepshikha Upadhyay",
+    username: "91%%",
+    body: "Lincolns High School Siliguri",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Prayag Upadhaya ",
+    username: "89.6%%",
+    body: "Mahbert High School Siliguri",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Lhundup Tshering Lama Khaiba",
+    username: "85.7%",
+    body: "Goethals Memorial School Kurseong",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Subh Jaiswal",
+    username: "85.4%",
+    body: "Birla Divya Jyoti Siliguri",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Binayak Chhetri ",
+    username: "82.4%",
+    body: "Don Bosco School Siliguri",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Koyel Ghosh",
+    username: "81.4%",
+    body: "Mahbert High School Siliguri",
     img: "https://avatar.vercel.sh/james",
   },
 ];
@@ -91,7 +133,7 @@ const MarqueeAnimation = () => {
       <div className="flex flex-col font-montserrat   justify-center items-center">
         <div className="rounded-full bg-white mb-6 flex items-center justify-center shadow-md px-2 py-1">
           <div className="rounded-full w-2 h-2 bg-green-300 mr-2"></div>
-          <p className="text-base text-slate-400 font-semibold">Kiwe Edu</p>
+          <p className="text-base text-slate-400 font-semibold">DNAtoms</p>
         </div>
         <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight font-semibold text-zinc-900 md:text-4xl lg:text-4xl ">
           Why US ?

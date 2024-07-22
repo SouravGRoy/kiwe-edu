@@ -17,9 +17,9 @@ export default function Features() {
           className="text-secondary hover:text-white transition duration-300"
         />
       ),
-      title: "SEO Optimized",
-      description: "Caters to clients who require an intensive approach to SEO",
-      href: "#seo-optimized", // Add your target URL here
+      title: "Experienced Faculty",
+      description:
+        "Learn from industry experts with years of teaching experience.",
     },
     {
       icon: (
@@ -28,9 +28,9 @@ export default function Features() {
           className="text-secondary hover:text-white transition duration-300"
         />
       ),
-      title: "Documentation",
-      description: "Extensive information needed to install and use Unicoach",
-      href: "#documentation", // Add your target URL here
+      title: "State-of-the-Art Facilities",
+      description:
+        "Modern classrooms and labs equipped with the latest technology.",
     },
     {
       icon: (
@@ -39,9 +39,9 @@ export default function Features() {
           className="text-secondary hover:text-white transition duration-300"
         />
       ),
-      title: "5 Stars Support",
-      description: "Our support team is here, if you run into any questions",
-      href: "#5-stars-support", // Add your target URL here
+      title: "Comprehensive Curriculum",
+      description:
+        "Holistic programs designed to meet industry standards and trends.",
     },
     {
       icon: (
@@ -50,9 +50,8 @@ export default function Features() {
           className="text-secondary hover:text-white transition duration-300"
         />
       ),
-      title: "Regular Updates",
-      description: "Absolutely free updates contain theme improvements",
-      href: "#regular-updates", // Add your target URL here
+      title: "Flexible Learning Options",
+      description: "Online, offline, and hybrid courses to fit your schedule.",
     },
     {
       icon: (
@@ -61,9 +60,9 @@ export default function Features() {
           className="text-secondary hover:text-white transition duration-300"
         />
       ),
-      title: "Demo Import",
-      description: "Import the full theme demo content with one mouse click",
-      href: "#demo-import", // Add your target URL here
+      title: "Development Programs",
+      description:
+        "Focus on academic, extracurricular, and personal growth for students.",
     },
     {
       icon: (
@@ -72,19 +71,18 @@ export default function Features() {
           className="text-secondary hover:text-white transition duration-300"
         />
       ),
-      title: "UI/UX Design",
+      title: "Learning Environment",
       description:
-        "Your site will always look sharp, and you'll enjoy the design",
-      href: "#ui-ux-design", // Add your target URL here
+        "Personalized guidance and resources to ensure student success.",
     },
   ];
 
   return (
-    <div className="flex flex-wrap justify-center md:py-20 bg-white gap-10">
+    <div className="flex flex-wrap justify-center md:py-20 mb-10 bg-white gap-10">
       <div className="flex flex-col font-montserrat   justify-center items-center">
         <div className="rounded-full bg-white mb-6 flex items-center justify-center shadow-md px-2 py-1">
           <div className="rounded-full w-2 h-2 bg-green-300 mr-2"></div>
-          <p className="text-base text-slate-400 font-semibold">Kiwe Edu</p>
+          <p className="text-base text-slate-400 font-semibold">DNAtoms</p>
         </div>
         <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight font-semibold text-zinc-900 md:text-4xl lg:text-4xl ">
           Why US ?
@@ -98,7 +96,6 @@ export default function Features() {
       {features.map((feature, index) => (
         <a
           key={index}
-          href={feature.href}
           className="flex items-start p-4 max-w-sm w-full md:w-1/3  text-black"
         >
           <div className="bg-blue-100 p-4 transition duration-300 hover:bg-secondary rounded-full">

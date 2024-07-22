@@ -2,6 +2,7 @@ import React from "react";
 import AnimatedGridPatternDemo from "../home/grid";
 import { Button } from "@/components/ui/button";
 import NumberTickerDemo from "./numberTicker";
+import Link from "next/link";
 
 export default function Stats() {
   return (
@@ -14,23 +15,27 @@ export default function Stats() {
               Explore Our Innovative Courses
             </h1>
             <p className="mb-8 leading-relaxed">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag.
+              &quot;The beautiful thing about learning is that nobody can take
+              it from you.&quot;- B.B. King
             </p>
             <div className="flex justify-center">
               <div className="flex space-x-3 flex-row z-30">
-                <Button
-                  variant="outline"
-                  className="text-zinc-900 backdrop-blur-sm mb-2 md:mr-4"
-                >
-                  View Programs
-                </Button>
-                <Button
-                  variant="secondary"
-                  className="text-black font-bold md:px-4 py-2 rounded"
-                >
-                  Enroll Now
-                </Button>
+                <Link href={"/coursesUs"}>
+                  <Button
+                    variant="outline"
+                    className="text-zinc-900 backdrop-blur-sm mb-2 md:mr-4"
+                  >
+                    View Programs
+                  </Button>
+                </Link>
+                <Link href={"/contactUs"}>
+                  <Button
+                    variant="secondary"
+                    className="text-black font-bold md:px-4 py-2 rounded"
+                  >
+                    Enroll Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

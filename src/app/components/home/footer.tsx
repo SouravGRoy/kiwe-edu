@@ -2,7 +2,6 @@ import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -32,7 +31,7 @@ const Footer = () => {
                     d="M16 8v10M8 8v10m8-5H8"
                   />
                 </svg>
-                457 Mott Street, NY 10013
+                Champasari Rd, Ward 46, 734003
               </li>
               <li className="flex items-center mb-2">
                 <svg
@@ -75,9 +74,9 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h4 className="text-xl font-bold mb-4">Popular courses :</h4>
             <ul>
-              <li className="mb-2">Leadership Skills - Mark Hook</li>
-              <li className="mb-2">Typography Design - Una Anston</li>
-              <li className="mb-2">Learn German - Scott Brown</li>
+              <li className="mb-2">Regular Course - (ICSE,ISC AND CBSE)</li>
+              <li className="mb-2">Crash Course - (ICSE,ISC AND CBSE)</li>
+              <li className="mb-2">Admission fee: Rs. 2000</li>
             </ul>
           </div>
 
@@ -97,7 +96,7 @@ const Footer = () => {
               <Link href="/servicesUs" className="mb-2  hover:text-red-500">
                 Become An Instructor
               </Link>
-              <Link href="/contactUs" className="mb-2  hover:text-red-500">
+              <Link href="/gallaryUs" className="mb-2  hover:text-red-500">
                 Events
               </Link>
             </div>

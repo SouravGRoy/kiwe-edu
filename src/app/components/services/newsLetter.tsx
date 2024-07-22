@@ -11,8 +11,8 @@ export default function NewLetter() {
               Subscribe to our newsletter.
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-              velit quis. Duis tempor incididunt dolore.
+              Experience visionary education tailored to unleash your potential
+              and prepare you for a dynamic future at Visionary Institute.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -45,8 +45,8 @@ export default function NewLetter() {
               </div>
               <dt className="mt-4 font-semibold text-white">Weekly articles</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
-                cupidatat duis commodo amet.
+                Our institute excels in fostering academic excellence and
+                holistic development.
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -58,8 +58,8 @@ export default function NewLetter() {
               </div>
               <dt className="mt-4 font-semibold text-white">No spam</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
+                Join us to achieve your educational goals and become future
+                leaders.
               </dd>
             </div>
           </dl>

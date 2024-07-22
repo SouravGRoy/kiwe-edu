@@ -105,24 +105,24 @@ export const TweetNotFound = ({
 export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="flex flex-row justify-between tracking-tight">
     <div className="flex items-center space-x-2">
-      <a href={tweet.user.url} target="_blank" rel="noreferrer">
+      <a href={"https://kiwemedia.com/"} target="_blank" rel="noreferrer">
         <img
-          title={`Profile picture of ${tweet.user.name}`}
+          title={`Profile picture of ${"sourav"}`}
           alt={tweet.user.screen_name}
           height={48}
           width={48}
-          src={tweet.user.profile_image_url_https}
-          className="overflow-hidden rounded-full border border-transparent"
+          src={"/images/cloudX.png"}
+          className="overflow-hidden  rounded-full border border-transparent"
         />
       </a>
       <div>
         <a
-          href={tweet.user.url}
+          href={"https://kiwemedia.com/"}
           target="_blank"
           rel="noreferrer"
           className="flex items-center whitespace-nowrap font-semibold"
         >
-          {truncate(tweet.user.name, 20)}
+          {truncate("kiwemedia", 20)}
           {tweet.user.verified ||
             (tweet.user.is_blue_verified && (
               <Verified className="ml-1 inline h-4 w-4 text-blue-500" />
@@ -130,17 +130,17 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
         </a>
         <div className="flex items-center space-x-1">
           <a
-            href={tweet.user.url}
+            href={"https://kiwemedia.com/"}
             target="_blank"
             rel="noreferrer"
             className="text-sm text-gray-500 transition-all duration-75"
           >
-            @{truncate(tweet.user.screen_name, 16)}
+            @{truncate("kiwemedia", 16)}
           </a>
         </div>
       </div>
     </div>
-    <a href={tweet.url} target="_blank" rel="noreferrer">
+    <a href={"https://kiwemedia.com/"} target="_blank" rel="noreferrer">
       <span className="sr-only">Link to tweet</span>
       <Twitter className="h-5 w-5 items-start text-[#3BA9EE] transition-all ease-in-out hover:scale-105" />
     </a>
@@ -149,33 +149,18 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
 
 export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="break-words leading-normal tracking-tighter">
-    {tweet.entities.map((entity, idx) => {
-      switch (entity.type) {
-        case "url":
-        case "symbol":
-        case "hashtag":
-        case "mention":
-          return (
-            <a
-              key={idx}
-              href={entity.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-normal text-gray-500"
-            >
-              <span>{entity.text}</span>
-            </a>
-          );
-        case "text":
-          return (
-            <span
-              key={idx}
-              className="text-sm font-normal"
-              dangerouslySetInnerHTML={{ __html: entity.text }}
-            />
-          );
-      }
-    })}
+    <a
+      href={"https://kiwemedia.com/"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm font-normal text-gray-500"
+    >
+      <span>
+        ☁️ kiwemedia is a strategic partner for fast-grow­ing tech businesses
+        that need to raise funds, sell prod­ucts, ex­plain com­plex ideas, and
+        hire great peo­ple.
+      </span>
+    </a>
   </div>
 );
 
@@ -200,7 +185,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
         {tweet.photos.map((photo) => (
           <img
             key={photo.url}
-            src={photo.url}
+            src={"/images/kiweMedia.png"}
             title={"Photo by " + tweet.user.name}
             alt={tweet.text}
             className="h-64 w-5/6 shrink-0 snap-center snap-always rounded-xl border object-cover shadow-sm"

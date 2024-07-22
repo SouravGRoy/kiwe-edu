@@ -38,7 +38,7 @@ export default function LandingAbout() {
           </div>
         </div>
         <section className="text-gray-600 font-montserrat body-font">
-          <div className="container px-5 md:py-12 py-8 mx-auto">
+          <div className="container px-2 md:py-12 py-8 mx-auto">
             <div className="text-center md:mb-20">
               <h1 className="text-base font-thin title-font text-gray-900 mb-4">
                 ------- CUSTOMER REVIEWS -------

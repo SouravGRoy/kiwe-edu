@@ -13,11 +13,11 @@ export type contentType = {
   export const content: contentType[] = [
     {
       id: 1,
-      title: "MBA",
-      course: "Master in Business Administration",
+      title: "REGULAR",
+      course: "SCIENCE, ARTS AND COMMERCE",
       image: "/images/course.webp",
-      eligibility: "12th pass",
-      duration: "2 years",
+      eligibility: "IX AND XI",
+      duration: "APRIL (PRESENT YEAR) TO FEBRUARY (NEXT YEAR)",
       courseFee: "1,40,000",
       description:
         "This website features a sophisticated color palette infused with metallic accents, layered over a blue-toned gradient that creates a stylish 3D effect. This design choice enhances Shopify's product updates, fostering a serene atmosphere that sparks curiosity in viewers.",
@@ -25,11 +25,11 @@ export type contentType = {
     },
     {
       id: 2,
-      title: "B.Tech",
-      course: "Bachelor of Technology",
+      title: "REGULAR",
+      course: "SCIENCE, ARTS AND COMMERCE",
       image:"/images/course.webp",
-      eligibility: "12th pass with Science",
-      duration: "4 years",
+      eligibility: "X AND XII",
+      duration: "APRIL TO NOVEMBER OF THE SAME YEAR",
       courseFee: "2,00,000",
       description:
         "An innovative approach to technology education with hands-on experience and modern labs, providing students with the skills needed for the tech industry.",
@@ -37,11 +37,11 @@ export type contentType = {
     },
     {
       id: 3,
-      title: "B.Sc",
-      course: "Bachelor of Science",
+      title: "CRASH COURSE",
+      course: "SCIENCE, ARTS AND COMMERCE",
       image:  "/images/course.webp",
-      eligibility: "12th pass with Science",
-      duration: "3 years",
+      eligibility: "X AND XII",
+      duration: "DECEMBER (1ST WEEK) TO FEBRUARY OF NEXT YEAR (1ST WEEK)",
       courseFee: "90,000",
       description:
         "Focus on research and practical knowledge, with a curriculum designed to foster scientific curiosity and analytical skills in students.",

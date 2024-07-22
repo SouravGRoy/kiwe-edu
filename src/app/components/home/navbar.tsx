@@ -32,7 +32,7 @@ export default function Navbar() {
         <div className="flex space-x-4">kiwe@gmail.com</div>
       </div>
       {/* Main navbar */}
-      <div className=" bg-gradient-to-r dark:to-white from-[#1A1A5E]  dark:from-background  shadow-sm">
+      <div className=" bg-gradient-to-r dark:to-white from-secondary  dark:from-background  shadow-sm">
         <div className="container mx-auto px-4 md:py-2 py-5 flex justify-between items-center">
           {/* Logo */}
           <Link href={"/"} className="flex  items-center md:space-x-2">

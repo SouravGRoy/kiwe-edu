@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import ClientTweetCard from "../magicui/clientTweet";
+import Link from "next/link";
 
 export async function TweetImages() {
   return (
@@ -17,19 +18,20 @@ export async function TweetImages() {
             Empowering Leaders, Innovating Tomorrow.
           </h1>
           <p className="text-base text-gray-400">
-            At [Institute Name], we aim to be a global leader in education,
-            known for excellence and impactful research. We empower students to
-            become forward-thinking leaders who drive positive change, preparing
-            them to meet future challenges with confidence and integrity.
+            At DNAtoms, we aim to be a global leader in education, known for
+            excellence and impactful research. We empower students to become
+            forward-thinking leaders who drive positive change, preparing them
+            to meet future challenges with confidence and integrity.
           </p>
         </div>
-
-        <Button
-          variant={"secondary"}
-          className="mt-8 p-6 shadow-md shadow-cyan-200 hover:drop-shadow-md w-fit"
-        >
-          Learn More
-        </Button>
+        <Link href={"/aboutUs"}>
+          <Button
+            variant={"secondary"}
+            className="mt-8 p-6 shadow-md shadow-cyan-200 hover:drop-shadow-md w-fit"
+          >
+            Learn More
+          </Button>
+        </Link>
       </div>
     </div>
   );

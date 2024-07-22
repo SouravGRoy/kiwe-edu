@@ -3,48 +3,64 @@ import Image from "next/image";
 const posts = [
   {
     id: 1,
-    title: "Boost your conversion rate",
+    title: "Dedicated Faculty with a Passion for Teaching",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Our institute’s dedicated, knowledgeable teachers ensure high-quality education, fostering growth and individual student success.",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
+    category: { title: "Institute", href: "#" },
     author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
+      name: "Mr. Yowan Pradhan",
+      role: " DFA,B.Sc/M.Sc(Mathematics),B.Ed,Google Scholar ",
       href: "#",
       imageUrl: "/images/person.jpg",
     },
   },
   {
     id: 2,
-    title: "Boost your conversion rate",
+    title: "Experienced Educators Committed to Student Success",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Our institute boasts a diverse team of experienced educators who are committed to student success. With backgrounds in various fields, our teachers provide comprehensive and engaging instruction. ",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
+    category: { title: "Institute", href: "#" },
     author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
+      name: "Mr. Yogdeep Pradhan:",
+      role: "B.Sc (Physics), M.Sc ( Physics), B.Ed",
       href: "#",
       imageUrl: "/images/person.jpg",
     },
   },
   {
     id: 3,
-    title: "Boost your conversion rate",
+    title: "Inspiring Mentors Shaping the Future Leaders",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Our teachers are inspiring mentors, creating a supportive learning atmosphere and guiding students towards excellence and leadership.",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
+    category: { title: "Institute", href: "#" },
     author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
+      name: "Ms. Sudakshina Hangma Sereng (Saesay maam)",
+      role: "B.Sc (Microbiology), M.Sc (Microbiology), B.Ed, West Bengal State Eligibility Test (WBSET)",
+      href: "#",
+      imageUrl: "/images/person.jpg",
+    },
+  },
+  {
+    id: 4,
+    title: " Expert Teachers Cultivating Future Innovators",
+    href: "#",
+    description:
+      "Our expert teachers cultivate future innovators with engaging lessons and personalized guidance, ensuring every student's success and growth.",
+    date: "Mar 16, 2020",
+    datetime: "2020-03-16",
+    category: { title: "Institute", href: "#" },
+    author: {
+      name: ". Ms. Dhaseen Lepcha, Ms. Nivdita Sujee, Ms. Resha Yonjan, Mr. Surajeet Mandal, Mr. Khan ",
+      role: "",
       href: "#",
       imageUrl: "/images/person.jpg",
     },
@@ -55,11 +71,11 @@ export default function Blog() {
   return (
     <div className="bg-white ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-10 grid grid-cols-1 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:grid-cols-3 lg:gap-8">
           {posts.map((post) => (
             <article
               key={post.id}
-              className="flex max-w-xl flex-col items-start justify-between"
+              className="flex flex-col items-start justify-between"
             >
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={post.datetime} className="text-gray-500">
@@ -67,15 +83,15 @@ export default function Blog() {
                 </time>
                 <a
                   href={post.category.href}
-                  className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                  className="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                 >
                   {post.category.title}
                 </a>
               </div>
-              <div className="group relative">
+              <div className="group">
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                   <a href={post.href}>
-                    <span className="absolute inset-0" />
+                    <span className=" " />
                     {post.title}
                   </a>
                 </h3>
@@ -83,7 +99,7 @@ export default function Blog() {
                   {post.description}
                 </p>
               </div>
-              <div className="relative mt-8 flex items-center gap-x-4">
+              <div className="mt-8 flex items-center gap-x-4">
                 <Image
                   alt={"image"}
                   width={1000}

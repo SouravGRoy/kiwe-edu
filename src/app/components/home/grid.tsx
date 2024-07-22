@@ -7,7 +7,7 @@ const AnimatedGridPatternDemo = () => {
   return (
     <div className="relative flex h-full w-full max-w-[36rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-28 md:shadow-xl">
       <p className="z-10 whitespace-pre-wrap text-center md:text-5xl text-3xl font-medium tracking-tighter text-secondary">
-        Kiwe Edu
+        DNAtoms
       </p>
       <AnimatedGridPattern
         numSquares={30}

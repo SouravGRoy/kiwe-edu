@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AboutLanding() {
   const container = {
@@ -25,7 +26,7 @@ export default function AboutLanding() {
       <div className="flex flex-col font-montserrat mb-6  justify-center items-center">
         <div className="rounded-full bg-white mb-6 flex items-center justify-center shadow-md px-2 py-1">
           <div className="rounded-full w-2 h-2 bg-green-300 mr-2"></div>
-          <p className="text-base text-slate-400 font-semibold">Kiwe Edu</p>
+          <p className="text-base text-slate-400 font-semibold">DNAtoms</p>
         </div>
         <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl ">
           About Us
@@ -93,20 +94,19 @@ export default function AboutLanding() {
               Empowering Leaders, Innovating Tomorrow.
             </h1>
             <p className="text-base text-gray-400">
-              At [Institute Name], we aim to be a global leader in education,
-              known for excellence and impactful research. We empower students
-              to become forward-thinking leaders who drive positive change,
-              preparing them to meet future challenges with confidence and
-              integrity.
+              At DNAtoms, we aim to be a global leader in education, known for
+              excellence and impactful research. We empower students to become
+              forward-thinking leaders who drive positive change, preparing them
+              to meet future challenges with confidence and integrity.
             </p>
           </div>
 
-          <Button
-            variant={"secondary"}
-            className="mt-8 p-6 shadow-md shadow-cyan-200 hover:drop-shadow-md w-fit"
+          <Link
+            href={"/aboutUs"}
+            className="mt-8 p-3 shadow-md shadow-cyan-200 hover:drop-shadow-md font-semibold w-fit"
           >
             Learn More
-          </Button>
+          </Link>
         </div>
       </div>
     </div>

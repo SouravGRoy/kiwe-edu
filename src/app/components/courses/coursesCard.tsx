@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/dialog";
 import { contentType } from "../../../../content";
 import { Button } from "@/components/ui/button";
-import { IoIosTime } from "react-icons/io";
 import Image from "next/image";
+import { PiStudentFill } from "react-icons/pi";
 
 type CoursesCardProps = {
   courses: contentType[];
@@ -31,12 +31,12 @@ const CourseCard: React.FC<{ course: contentType }> = ({ course }) => (
           <h2 className="text-sm font-bold">{course.title}</h2>
         </div>
         <div className="absolute bottom-10 w-full bg-black bg-opacity-35 text-white px-2 py-2 flex flex-col items-start">
-          <h2 className="text-sm font-bold">{course.title}</h2>
-          <p className="text-xs">{course.course}</p>
+          <h2 className="text-lg font-bold">{course.title}</h2>
+          <p className="text-sm font-semibold">{course.course}</p>
         </div>
-        <div className="bg-primary flex items-center px-8 justify-start">
-          <IoIosTime />
-          <p className="text-sm  py-4"> 10 days ago</p>
+        <div className="bg-primary flex items-center px-4 justify-start">
+          <PiStudentFill />
+          <p className="text-sm px-2  py-4"> Class - {course.eligibility}</p>
         </div>
       </div>
     </DialogTrigger>
@@ -49,6 +49,8 @@ const CourseCard: React.FC<{ course: contentType }> = ({ course }) => (
           <Image
             src={course.image}
             alt={course.title}
+            width={100}
+            height={100}
             className="w-full h-64 object-cover rounded-lg mb-4"
           />
           <p className="mb-2">

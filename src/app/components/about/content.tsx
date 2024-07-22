@@ -1,6 +1,11 @@
-import { FaCloudArrowUp } from "react-icons/fa6";
-import { FaUserLock } from "react-icons/fa";
-import { BsDatabaseFillAdd } from "react-icons/bs";
+import { Gi3dGlasses } from "react-icons/gi";
+import { TbAirConditioning } from "react-icons/tb";
+import { GrWorkshop } from "react-icons/gr";
+import { FaBuilding } from "react-icons/fa";
+import { HiAcademicCap } from "react-icons/hi2";
+import { GiProgression } from "react-icons/gi";
+
+import { ImBooks } from "react-icons/im";
 import Image from "next/image";
 
 export default function Content() {
@@ -45,12 +50,13 @@ export default function Content() {
                 Deploy faster
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                A better workflow
+                MESSAGE FROM THE DIRECTOR
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas.
+                Every child is special in his/her own way and has the ability
+                and the capacity to attain his/her dream. In order to achieve
+                those dreams children require a very strong reliable academic
+                system which will help them to climb up the stairs to success.
               </p>
             </div>
           </div>
@@ -68,72 +74,116 @@ export default function Content() {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
+                To quote James Clear, author of the book Atomic Habits &quot;In
+                order to improve for good, you need to solve problems at the
+                systems level. Fix the inputs and the outputs will fix
+                themselves.&quot; here in DNAtoms Institute we not only prepare
+                our children to obtain good marks in their examinations but also
+                work at a grass root level system to improve their basics and
+                concepts in their respective subjects. We are immensely happy
+                that now you are a part of our Institution and we wish you luck
+                and success for your future.
               </p>
-              <ul role="list" className="mt-8 space-y-8 text-gray-600">
+              <h1 className="mt-8 font-bold text-3xl text-zinc-900">
+                Why <span className="text-secondary">DNAtoms</span> Institute ?
+              </h1>
+              <ul role="list" className="mt-6 space-y-3 text-gray-600">
                 <li className="flex gap-x-3">
-                  <FaCloudArrowUp
+                  <Gi3dGlasses
                     aria-hidden="true"
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                    className="mt-1 h-6 w-6 flex-none text-indigo-600"
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Push to deploy.
+                      • Well qualified and highly competent faculties.
                     </strong>{" "}
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maiores impedit perferendis suscipit eaque, iste dolor
-                    cupiditate blanditiis ratione.
+                  </span>
+                </li>
+
+                <li className="flex gap-x-3">
+                  <GrWorkshop
+                    aria-hidden="true"
+                    className="mt-1 h-6 w-6 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      • Comprehensive study materials are provided.
+                    </strong>{" "}
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <FaUserLock
+                  <ImBooks
                     aria-hidden="true"
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                    className="mt-1 h-6 w-6 flex-none text-indigo-600"
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      SSL certificates.
+                      • Well equipped library for any reference books.
                     </strong>{" "}
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <BsDatabaseFillAdd
+                  <FaBuilding
                     aria-hidden="true"
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                    className="mt-1 h-6 w-6 flex-none text-indigo-600"
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Database backups.
+                      • Hostel facilities provided (only for girls)
                     </strong>{" "}
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <TbAirConditioning
+                    aria-hidden="true"
+                    className="mt-1 h-6 w-6 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      • Enabling environment equipped with proper classrooms
+                      with AC.
+                    </strong>{" "}
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <GiProgression
+                    aria-hidden="true"
+                    className="mt-1 h-6 w-6 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      • Weekly and monthly test series conducted to keep track
+                      of the student's progress
+                    </strong>{" "}
+                  </span>
+                </li>
+
+                <li className="flex gap-x-3">
+                  <HiAcademicCap
+                    aria-hidden="true"
+                    className="mt-1 h-6 w-6 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      • Individual attention is given to students if they are
+                      facing any academic problems.
+                    </strong>{" "}
                   </span>
                 </li>
               </ul>
-              <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas. Iaculis convallis ac tempor
-                et ut. Ac lorem vel integer orci.
+              <p className="mt-8 font-bold underline text-red-500">
+                Thank you, Sudakshina Hangma Sereng (Saesay ma'am)
               </p>
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-                No server? No problem.
+                All about DNAtoms :
               </h2>
               <p className="mt-6">
-                Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam
-                consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod
-                vitae interdum mauris enim, consequat vulputate nibh. Maecenas
-                pellentesque id sed tellus mauris, ultrices mauris. Tincidunt
-                enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
-                turpis ipsum eu a sed convallis diam.
+                DNAtoms Institute was created in 2023 by the vision and
+                dedication of 4 visionaries Yowan Pradhan, Yogdeep Pradhan,
+                Sudakshina Hangma Sereng and Neetika Tamang. Here the faculties
+                prepare students to face academic challenges from the class of 9
+                to 12 with affordable quality education. We aim to provide the
+                best education to the students.
               </p>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function Learn() {
           <p className="text-base text-slate-400 font-semibold">DNAtoms </p>
         </div>
         <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight font-semibold text-zinc-900 md:text-4xl lg:text-4xl ">
-          Director Work
+          Director&apos;s Word
         </h1>
       </div>
       <div className="flex md:flex-row flex-col px-10 ">
@@ -89,11 +89,10 @@ export default function Learn() {
               Empowering Leaders, Innovating Tomorrow.
             </h1>
             <p className="text-base text-gray-400">
-              At [Institute Name], we aim to be a global leader in education,
-              known for excellence and impactful research. We empower students
-              to become forward-thinking leaders who drive positive change,
-              preparing them to meet future challenges with confidence and
-              integrity.
+              Every child is special in his/her own way and has the ability and
+              the capacity to attain his/her dream. In order to achieve those
+              dreams children require a very strong reliable academic system
+              which will help them to climb up the stairs to success
             </p>
           </div>
 
