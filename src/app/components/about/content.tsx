@@ -153,7 +153,7 @@ export default function Content() {
                   <span>
                     <strong className="font-semibold text-gray-900">
                       • Weekly and monthly test series conducted to keep track
-                      of the student's progress
+                      of the student&apos;s progress
                     </strong>{" "}
                   </span>
                 </li>
@@ -172,7 +172,7 @@ export default function Content() {
                 </li>
               </ul>
               <p className="mt-8 font-bold underline text-red-500">
-                Thank you, Sudakshina Hangma Sereng (Saesay ma'am)
+                Thank you, Sudakshina Hangma Sereng (Saesay ma&apos;am)
               </p>
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
                 All about DNAtoms :
