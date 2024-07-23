@@ -179,6 +179,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
         Your browser does not support the video tag.
       </video>
     )}
+    {/* want 3 diff images */}
     {tweet.photos && (
       <div className="relative flex transform-gpu snap-x snap-mandatory gap-4 overflow-x-auto">
         <div className="shrink-0 snap-center sm:w-2" />
