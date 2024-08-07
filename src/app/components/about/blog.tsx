@@ -110,7 +110,7 @@ export default function Blog() {
                 <div className="text-sm leading-6">
                   <p className="font-semibold text-gray-900">
                     <a href={post.author.href}>
-                      <span className="absolute inset-0" />
+                      <span className=" inset-0" />
                       {post.author.name}
                     </a>
                   </p>

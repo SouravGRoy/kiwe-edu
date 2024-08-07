@@ -9,21 +9,22 @@ import { OrbitingCircleAnimation } from "./components/home/orbitingCircleAnimati
 import Footer from "./components/home/footer";
 import FinalLanding from "./components/home/finalLanding";
 import AboutLanding from "./components/home/aboutLanding";
+import Layout from "./components/Layout";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
-      <FinalLanding />
-      <AboutLanding />
-      <hr className="md:mb-0 mb-10" />
-      <Features />
-      <Heading />
-      <Cards />
-      <MarqueeAnimation />
-      <Learn />
-      <OrbitingCircleAnimation />
-      <Footer />
+      <Layout>
+        <FinalLanding />
+        <AboutLanding />
+        <hr className="md:mb-0 mb-10" />
+        <Features />
+        <Heading />
+        <Cards />
+        <MarqueeAnimation />
+        <Learn />
+        <OrbitingCircleAnimation />
+      </Layout>
     </div>
   );
 }

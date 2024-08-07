@@ -8,7 +8,7 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Navbar() {
+export default function SpecialNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
