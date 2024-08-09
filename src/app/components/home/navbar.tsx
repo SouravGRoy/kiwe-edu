@@ -47,45 +47,39 @@ export default function Navbar() {
           <div className="hidden font-semibold lg:flex space-x-12">
             <Link
               href="/aboutUs"
-              className="text-black active:text-primary hover:text-red-500"
+              className="text-black active:text-primary hover:underline"
             >
               About
             </Link>
             <Link
               href="/coursesUs"
-              className="text-black active:text-primary hover:text-red-500"
+              className="text-black active:text-primary hover:underline"
             >
               Courses Lists
             </Link>
             <Link
               href="/servicesUs"
-              className="text-black active:text-primary hover:text-red-500"
+              className="text-black active:text-primary hover:underline"
             >
               Services
             </Link>
             <Link
-              href="/coursesUs"
-              className="text-black active:text-primary hover:text-red-500"
+              href="/hostelUs"
+              className="text-black active:text-primary hover:underline"
             >
               Hostel
             </Link>
             <Link
-              href="/servicesUs"
-              className="text-black active:text-primary hover:text-red-500"
+              href="/testimonialUs"
+              className="text-black active:text-primary hover:underline"
             >
               Testimonial
             </Link>
             <Link
               href="/gallaryUs"
-              className="text-black active:text-primary hover:text-red-500"
+              className="text-black active:text-primary hover:underline"
             >
               Gallery
-            </Link>
-            <Link
-              href="/contactUs"
-              className="text-black active:text-primary hover:text-red-500"
-            >
-              Apply Now
             </Link>
           </div>
           {/* Icons */}
@@ -120,43 +114,43 @@ export default function Navbar() {
           >
             <Link
               href="/aboutUs"
-              className="text-black underline hover:text-red-500"
+              className="text-black underline hover:underline"
             >
               About
             </Link>
             <Link
               href="/coursesUs"
-              className="text-black underline hover:text-red-500"
+              className="text-black underline hover:underline"
             >
               Courses Lists
             </Link>
             <Link
               href="/servicesUs"
-              className="text-black underline hover:text-red-500"
+              className="text-black underline hover:underline"
             >
               Hostel
             </Link>
             <Link
               href="/gallaryUs"
-              className="text-black underline hover:text-red-500"
+              className="text-black underline hover:underline"
             >
               Testimonial
             </Link>
             <Link
               href="/servicesUs"
-              className="text-black underline hover:text-red-500"
+              className="text-black underline hover:underline"
             >
               Services
             </Link>
             <Link
               href="/gallaryUs"
-              className="text-black underline hover:text-red-500"
+              className="text-black underline hover:underline"
             >
               Gallery
             </Link>
             <Link
               href="/contactUs"
-              className="text-black underline hover:text-red-500"
+              className="text-black underline hover:underline"
             >
               Apply Now
             </Link>

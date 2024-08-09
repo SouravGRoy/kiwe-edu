@@ -70,12 +70,12 @@ const posts = [
 export default function Blog() {
   return (
     <div className="bg-white ">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mt-10 grid grid-cols-1 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:grid-cols-3 lg:gap-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-4">
+        <div className="mx-auto mt-10 grid grid-cols-1  gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:grid-cols-3 lg:gap-8">
           {posts.map((post) => (
             <article
               key={post.id}
-              className="flex flex-col items-start justify-between"
+              className="flex flex-col items-start border p-2  shadow-lg rounded-md  justify-between"
             >
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={post.datetime} className="text-gray-500">

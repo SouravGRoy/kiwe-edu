@@ -5,7 +5,7 @@ import CoursesCard from "../components/courses/coursesCard";
 import { content } from "../../../content";
 import { ScrollBasedVelocityDemo } from "../components/courses/scrollVelocity";
 
-const Services = () => {
+const Courses = () => {
   return (
     <div>
       <Navbar />
@@ -20,4 +20,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Courses;

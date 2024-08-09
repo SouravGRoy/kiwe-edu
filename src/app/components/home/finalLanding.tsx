@@ -35,9 +35,9 @@ export default function FinalLanding() {
           </p>
           <div className="mt-8 flex space-x-3 px-2 z-30">
             <Button
-              size={"lg"}
               variant="outline"
-              className="text-zinc-900 hover:text-white text-base backdrop-blur-sm mb-2"
+              size="lg"
+              className="text-zinc-900  hover:text-white text-base backdrop-blur-sm mb-2"
             >
               View Programs
             </Button>

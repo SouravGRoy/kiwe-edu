@@ -88,16 +88,16 @@ const Footer = () => {
                 About Us
               </Link>
               <Link href="/contactUs" className="mb-2  hover:text-red-500">
-                Registration
+                Services
               </Link>
               <Link href="/coursesUs" className="mb-2  hover:text-red-500">
                 Available Courses
               </Link>
               <Link href="/servicesUs" className="mb-2  hover:text-red-500">
-                Become An Instructor
+                Testimonial
               </Link>
               <Link href="/gallaryUs" className="mb-2  hover:text-red-500">
-                Events
+                Contact Us
               </Link>
             </div>
           </div>
