@@ -33,7 +33,7 @@ const AboutTestimonial: React.FC = () => {
           <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
             <p>
               &quot;Dreams are not those which come while we are sleeping, but
-              dreams are those when you don't sleep before fulfilling
+              dreams are those when you don&apos;t sleep before fulfilling
               them.&quot;
             </p>
           </blockquote>
