@@ -14,7 +14,7 @@ const AboutTestimonial: React.FC = () => {
           </div>
           <div className="flex justify-between md:flex-row flex-col ">
             <h2 className="text-4xl font-bold text-start mb-8">
-              Testimonials:&ndash;
+              Testimonials:-
             </h2>
           </div>
         </div>
@@ -40,7 +40,7 @@ const AboutTestimonial: React.FC = () => {
           <figcaption className="mt-10">
             <Image
               alt="Judith Black"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="/images/cloudX.png"
               width={40} // Adjust width and height as needed
               height={40}
               className="mx-auto rounded-full"
