@@ -12,28 +12,6 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, description, imageSrc }) => {
   return (
-    // <div className=" overflow-hidden md:px-12  bg-white shadow-lg md:h-2/3 h-full rounded-lg flex m-2">
-    //   <Image
-    //     src={imageSrc}
-    //     width={100}
-    //     height={100}
-    //     alt={title}
-    //     className="w-full h-full object-cover object-center"
-    //   />
-    //   <div className=" p-20 bg-gray-900 opacity-0 hover:opacity-75 transition-opacity duration-300">
-    //     <div className=" flex flex-col items-center justify-center">
-    //       <h2 className="text-xl font-['NeueMontreal-Regular'] mb-2 text-[#ADBBDA] font-semibold">
-    //         {title}
-    //       </h2>
-    //       <p className="text-white px-4 font-['NeueMontreal-Regular'] text-center">
-    //         {description}
-    //       </p>
-    //       <Button variant={"secondary"} className="mt-4">
-    //         Explore
-    //       </Button>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="flex-col bg-white shadow-lg border-t-2 p-5 rounded-lg flex ">
       <div className="feature-icon inline-flex items-center justify-start text-primary  text-2xl mb-3">
         <Image
