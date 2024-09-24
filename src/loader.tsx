@@ -6,6 +6,7 @@ export default function Loader() {
     <div className="w-screen h-screen  flex justify-center items-center flex-col">
       <Image
         src="/images/logoX.png"
+        priority
         width={150}
         height={150}
         alt="logo"
