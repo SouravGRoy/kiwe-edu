@@ -20,31 +20,38 @@ export default function FinalLanding() {
           transition={{ duration: 0.9 }}
           className="flex flex-col items-center md:py-32 pt-16 text-center z-20"
         >
-          <div className="rounded-full bg-white mb-6 flex px-2 py-1 shadow-md">
-            <div className="rounded-full md:w-2 md:h-2 w-1 h-1 my-2 mr-1 bg-green-300"></div>
-            <p className="text-sm md:text-base text-slate-400">
+          {/* Notification Text */}
+          <div className="rounded-full bg-white mb-6 flex px-4 py-2 shadow-md">
+            <div className="rounded-full md:w-3 md:h-3 w-2 h-2 my-2 mr-2 bg-green-300"></div>
+            <p className="text-md md:text-lg text-slate-400">
               Premium Class with Absolute faculty
             </p>
           </div>
-          <h1 className="md:text-5xl text-4xl mb-2 font-bold">DNAtom&apos;s</h1>
-          <p className="text-secondary font-bold text-4xl md:text-5xl">
+
+          {/* Heading */}
+          <h1 className="text-5xl md:text-7xl mb-4 font-bold">DNAtom&apos;s</h1>
+          <p className="text-secondary font-bold text-4xl md:text-6xl">
             Institute
           </p>
-          <p className="mt-2 text-sm text-start md:text-md">
+
+          {/* Subtitle */}
+          <p className="mt-4 text-md md:text-lg text-start md:text-center">
             &quot;Inspiring excellence through innovative education.&quot;
           </p>
-          <div className="mt-8 flex space-x-3 px-2 z-30">
+
+          {/* Buttons */}
+          <div className="mt-8 flex space-x-4 px-2 z-30">
             <Button
               variant="outline"
               size="lg"
-              className="text-zinc-900  hover:text-white text-base backdrop-blur-sm mb-2"
+              className="text-zinc-900 hover:text-white text-base md:text-lg backdrop-blur-sm mb-2"
             >
               View Programs
             </Button>
             <Button
               size={"lg"}
               variant="secondary"
-              className="text-white font-bold text-lg md:px-5 rounded"
+              className="text-white font-bold text-lg md:text-xl md:px-6 rounded"
             >
               Enroll Now
             </Button>

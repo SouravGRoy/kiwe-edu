@@ -135,7 +135,7 @@ const MarqueeAnimation = () => {
           <div className="rounded-full w-2 h-2 bg-green-300 mr-2"></div>
           <p className="text-base text-slate-400 font-semibold">DNAtoms</p>
         </div>
-        <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight font-semibold text-zinc-900 md:text-4xl lg:text-4xl ">
+        <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight  text-zinc-900 md:text-4xl lg:text-4xl ">
           Why US ?
         </h1>
         <p className=" text-lg w-3/4 text-center font-normal text-gray-500 lg:text-base sm:px-16 xl:px-48 dark:text-gray-400">

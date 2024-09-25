@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export async function TweetImages() {
   return (
-    <div className="flex justify-around px-16 my-10">
+    <div className="flex md:flex-row flex-col justify-around md:px-16 px-2 my-10">
       <ClientTweetCard id="1678577280489234432" className="shadow-2xl" />
       <div className="font-montserrat md:items-start items-center w-full md:w-1/2 py-14 flex flex-col">
         <div className="rounded-full bg-white w-fit flex px-2 py-1 shadow-md">
