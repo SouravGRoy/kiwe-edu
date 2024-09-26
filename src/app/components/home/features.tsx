@@ -92,8 +92,8 @@ export default function Features() {
           prepare you for a dynamic future at Visionary Institute.
         </p>
       </div>
-      {/* Update the grid to have 2 rows with 3 columns */}
-      <div className="grid grid-cols-3 px-10 gap-10">
+      {/* Responsive grid layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-10 gap-10">
         {features.map((feature, index) => (
           <div
             key={index}
