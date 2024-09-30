@@ -16,13 +16,15 @@ const Card: React.FC<CardProps> = ({ title, description, imageSrc }) => {
       <div className="feature-icon inline-flex items-center justify-start text-primary  text-2xl mb-3">
         <Image
           src={imageSrc}
-          width={60}
+          width={100}
           height={60}
           alt={title}
           className="w-100 h-100 object-cover rounded-full object-center"
         />
       </div>
-      <h3 className="text-2xl text-gray-900">{title}</h3>
+      <h3 className="text-2xl font-bold mb-2 underline text-gray-900">
+        {title}
+      </h3>
       <p>{description}</p>
       <a
         href="/coursesUs"
@@ -45,23 +47,39 @@ export default function Cards() {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="md:my-20 mt-10 md:mb-0 mb-10">
               <Card
-                title="Lost Space"
-                description="LostSpace is the fastest growing Music Studio in WB"
-                imageSrc={"/images/card1.jpg"}
+                title="REGULAR-"
+                description="This Course offers education for students pursuing Science, Arts, or Commerce streams, providing in-depth academic preparation from April to February.... 
+
+
+
+
+"
+                imageSrc={"/images/s1.jpg"}
               />
             </div>
             <div className="md:my-20 md:mb-0 mb-10">
               <Card
-                title="Kiwe"
-                description="Kiwe is a Community Social Media(Currently in Progress)"
-                imageSrc={"/images/card2.jpg"}
+                title="REGULAR-"
+                description="This intensive course is designed for students in their final academic year of Grades 10 and 12, providing focused preparation in Science, Arts, or Commerce streams...
+
+
+
+
+
+
+
+
+
+"
+                imageSrc={"/images/s2.jpg"}
               />
             </div>
             <div className="md:my-20 ">
               <Card
-                title="Kiwe"
-                description="Kiwe is a Community Social Media(Currently in Progress)"
-                imageSrc={"/images/card3.jpg"}
+                title="CRASH COURSE"
+                description="This crash course is designed for students in Grades 10 and 12, offering an accelerated and focused revision of the Science, Arts, or Commerce syllabus.Spanning from December to early February...
+"
+                imageSrc={"/images/s3.jpg"}
               />
             </div>
           </div>

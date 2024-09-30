@@ -5,6 +5,8 @@ import { contentType } from "../../../../content";
 import { PiStudentFill } from "react-icons/pi";
 import Image from "next/image";
 import { GiBookshelf } from "react-icons/gi";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 type CoursesCardProps = {
   courses: contentType[];
@@ -71,6 +73,10 @@ const CourseCard: React.FC<{
           <p className="mb-2">
             <strong>Description:</strong> {course.description}
           </p>
+          <Link href={course.brochure} download>
+            {" "}
+            <Button variant={"secondary"}>Download Brochure</Button>
+          </Link>
         </div>
       )}
     </div>

@@ -65,6 +65,69 @@ const posts = [
       imageUrl: "/images/person.jpg",
     },
   },
+  // {
+  //   id: 5,
+  //   title: "Dedicated Faculty with a Passion for Teaching",
+  //   href: "#",
+  //   description:
+  //     "Our institute’s dedicated, knowledgeable teachers ensure high-quality education, fostering growth and individual student success.",
+  //   date: "Mar 16, 2020",
+  //   datetime: "2020-03-16",
+  //   category: { title: "Institute", href: "#" },
+  //   author: {
+  //     name: "Ms. Dhaseen Lepcha",
+  //     href: "#",
+  //     imageUrl: "/images/person.jpg",
+  //   },
+  // },
+  // {
+  //   id: 6,
+  //   title: "Experienced Educators Committed to Student Success",
+  //   href: "#",
+  //   description:
+  //     "Our institute boasts a diverse team of experienced educators who are committed to student success. With backgrounds in various fields, our teachers provide comprehensive and engaging instruction. ",
+  //   date: "Mar 16, 2020",
+  //   datetime: "2020-03-16",
+  //   category: { title: "Institute", href: "#" },
+  //   author: {
+  //     name: "Ms. Nivdita Sujee",
+
+  //     href: "#",
+  //     imageUrl: "/images/person.jpg",
+  //   },
+  // },
+  // {
+  //   id: 7,
+  //   title: "Inspiring Mentors Shaping the Future Leaders",
+  //   href: "#",
+  //   description:
+  //     "Our teachers are inspiring mentors, creating a supportive learning atmosphere and guiding students towards excellence and leadership.",
+  //   date: "Mar 16, 2020",
+  //   datetime: "2020-03-16",
+  //   category: { title: "Institute", href: "#" },
+  //   author: {
+  //     name: " Ms. Resha Yonjan",
+
+  //     href: "#",
+  //     imageUrl: "/images/person.jpg",
+  //   },
+  // },
+  // {
+  //   id:8,
+  //   title: " Expert Teachers Cultivating Future Innovators",
+  //   href: "#",
+  //   description:
+  //     "Our expert teachers cultivate future innovators with engaging lessons and personalized guidance, ensuring every student's success and growth.",
+  //   date: "Mar 16, 2020",
+  //   datetime: "2020-03-16",
+  //   category: { title: "Institute", href: "#" },
+  //   author: {
+  //     name: " Mr. Khan ",
+  //     role: "",
+  //     href: "#",
+  //     imageUrl: "/images/person.jpg",
+  //   },
+  // },
 ];
 
 export default function Blog() {
