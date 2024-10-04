@@ -1,63 +1,50 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { contentType } from "../../../../content";
-import { PiStudentFill } from "react-icons/pi";
-import Image from "next/image";
-import { GiBookshelf } from "react-icons/gi";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { IoIosTime } from "react-icons/io";
+import Image from "next/image";
 
 type CoursesCardProps = {
   courses: contentType[];
 };
 
-const CourseCard: React.FC<{
-  course: contentType;
-  isOpen: boolean;
-  toggleAccordion: () => void;
-}> = ({ course, isOpen, toggleAccordion }) => {
-  return (
-    <div className="bg-white shadow-lg border-t-2 p-5 rounded-lg mb-4 flex flex-col h-full">
-      <div className="flex flex-col justify-around h-full">
-        <div className="feature-icon flex items-center justify-start text-primary text-2xl mb-5">
-          <Image
-            src={course.image}
-            width={100}
-            height={120}
-            alt={course.title}
-            className="w-24 h-24 shadow-lg object-cover rounded-full"
-          />
+const CourseCard: React.FC<{ course: contentType }> = ({ course }) => (
+  <Dialog>
+    <DialogTrigger asChild>
+      <div className="relative font-montserrat cursor-pointer shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105">
+        <Image
+          src={course.image}
+          width={1000}
+          height={1000}
+          alt={course.title}
+          className="w-full h-64 bg-opacity-25  object-cover"
+        />
+        <div className="absolute top-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded">
+          <h2 className="text-sm font-bold">{course.title}</h2>
         </div>
-        <div className="flex space-x-2">
-          <GiBookshelf size={24} />
-          <h3 className="text-xl font-bold underline text-gray-900 mb-2">
-            {course.title}-
-          </h3>
+        <div className="absolute bottom-10 w-full bg-black bg-opacity-65 text-white px-2 py-2 flex flex-col items-start">
+          <h2 className="text-lg font-bold">{course.title}</h2>
+          <p className="text-sm font-semibold">{course.course}</p>
         </div>
-
-        <p className="flex-grow text-gray-500">{course.description}</p>
-
-        <div className="bg-primary flex items-center px-4 justify-between ">
-          <div className="flex items-center">
-            <PiStudentFill />
-            <p className="text-sm px-2 py-4">Class - {course.eligibility}</p>
-          </div>
-
-          <button
-            onClick={toggleAccordion}
-            className="icon-link text-blue-500 inline-flex items-center focus:outline-none"
-          >
-            {isOpen ? "Show Less" : "Read More"}
-            <svg className="bi w-4 h-4 ml-2" fill="currentColor">
-              <use xlinkHref="#chevron-right" />
-            </svg>
-          </button>
+        <div className="bg-primary flex items-center px-8 justify-start">
+          <IoIosTime />
+          <p className="text-sm  py-4">10 days ago</p>
         </div>
       </div>
+    </DialogTrigger>
 
-      {isOpen && (
-        <div className="p-4 mt-4 bg-gray-100 rounded-lg">
+    <DialogContent className="p-6 bg-white font-montserrat max-w-lg mx-auto">
+      <DialogHeader>
+        <DialogTitle className="text-2xl font-semibold">{course.title}</DialogTitle>
+        <DialogDescription>
           <p className="mb-2">
             <strong>Course:</strong> {course.course}
           </p>
@@ -67,38 +54,24 @@ const CourseCard: React.FC<{
           <p className="mb-2">
             <strong>Duration:</strong> {course.duration}
           </p>
-          <p className="mb-2">
+          {/* <p className="mb-2">
             <strong>Course Fee:</strong> {course.courseFee}
-          </p>
+          </p> */}
           <p className="mb-2">
             <strong>Description:</strong> {course.description}
           </p>
-          <Link href={course.brochure} download>
-            {" "}
-            <Button variant={"secondary"}>Download Brochure</Button>
-          </Link>
-        </div>
-      )}
-    </div>
-  );
-};
+          <Button variant={"secondary"}>Download Brochure</Button>
+        </DialogDescription>
+      </DialogHeader>
+    </DialogContent>
+  </Dialog>
+);
 
 const CoursesCard: React.FC<CoursesCardProps> = ({ courses }) => {
-  const [expandedCardId, setExpandedCardId] = useState<number | null>(null);
-
-  const handleToggle = (id: number) => {
-    setExpandedCardId(expandedCardId === id ? null : id);
-  };
-
   return (
     <div className="container mx-auto p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {courses.map((course) => (
-        <CourseCard
-          key={course.id}
-          course={course}
-          isOpen={expandedCardId === course.id}
-          toggleAccordion={() => handleToggle(course.id)}
-        />
+        <CourseCard key={course.id} course={course} />
       ))}
     </div>
   );
