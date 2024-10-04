@@ -20,16 +20,18 @@ export default function Navbar() {
         <div className="w-full font-montserrat">
             {/* Top bar */}
             <div className="hidden items-center justify-around bg-gray-900 px-4 py-2 text-sm text-white md:flex">
-                <div>Call +44 300 303 0266</div>
+                <div>Call +91 7718474501 </div>
                 <div className="flex flex-row space-x-2">
                     <span>Follow us :</span>
                     <div className="mt-1 flex space-x-2">
-                        <FaInstagram />
-                        <FaFacebook />
-                        <FaYoutube />
+                  <Link href={"https://www.instagram.com/dnatoms?igsh=bGR1Z3FuZXFkcXN6"}>  <FaInstagram /></Link>     
+                       <Link href={"https://m.facebook.com/100092304222336/"}> <FaFacebook /></Link>
+                       
                     </div>
                 </div>
-                <div className="flex space-x-4">kiwe@gmail.com</div>
+                <div className="flex space-x-4">dnatomsinstitute@gmail.com
+
+                </div>
             </div>
             {/* Main navbar */}
             <div className="dark:from-background bg-gradient-to-r from-secondary shadow-sm dark:to-white">
