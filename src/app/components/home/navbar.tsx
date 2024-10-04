@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="w-full font-montserrat">
             {/* Top bar */}
             <div className="hidden items-center justify-around bg-gray-900 px-4 py-2 text-sm text-white md:flex">
-                <div>Call +91 7718474501 </div>
+                <div>Call +91 9800740115 </div>
                 <div className="flex flex-row space-x-2">
                     <span>Follow us :</span>
                     <div className="mt-1 flex space-x-2">
