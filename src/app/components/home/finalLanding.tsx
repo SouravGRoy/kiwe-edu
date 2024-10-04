@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SmallVideoPlayer from "./smallVideoPlayer";
+import Link from "next/link";
 
 export default function FinalLanding() {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,6 +42,7 @@ export default function FinalLanding() {
 
           {/* Buttons */}
           <div className="mt-8 flex space-x-4 px-2 z-30">
+            <Link   href="/coursesUs">
             <Button
               variant="outline"
               size="lg"
@@ -48,13 +50,16 @@ export default function FinalLanding() {
             >
               View Programs
             </Button>
-            <Button
+          </Link>
+           <Link href={"/contactUs"}>
+           <Button
               size={"lg"}
               variant="secondary"
               className="text-white font-bold text-lg md:text-xl md:px-6 rounded"
             >
               Enroll Now
-            </Button>
+            </Button></Link>
+           
           </div>
         </motion.div>
 
