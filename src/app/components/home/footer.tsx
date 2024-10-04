@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h4 className="text-xl font-bold mb-4">Support :</h4>
             <div className="flex flex-col">
-              <Link href="/about" className="mb-2  hover:text-red-500">
+              <Link href="/aboutUs" className="mb-2  hover:text-red-500">
                 About Us
               </Link>
               <Link href="/contactUs" className="mb-2  hover:text-red-500">
