@@ -64,12 +64,12 @@ export default function Navbar() {
                         >
                             Services
                         </Link>
-                        <Link
+                        {/* <Link
                             href="/hostelUs"
                             className="text-black hover:underline active:text-primary"
                         >
                             Hostel
-                        </Link>
+                        </Link> */}
                         <Link
                             href="/testimonialUs"
                             className="text-black hover:underline active:text-primary"
@@ -133,14 +133,14 @@ export default function Navbar() {
                         >
                             Courses Lists
                         </Link>
-                        <Link
+                        {/* <Link
                             href="/servicesUs"
                             className="text-black underline hover:underline"
                         >
                             Hostel
-                        </Link>
+                        </Link> */}
                         <Link
-                            href="/gallaryUs"
+                            href="/testimonialUs"
                             className="text-black underline hover:underline"
                         >
                             Testimonial
@@ -156,6 +156,12 @@ export default function Navbar() {
                             className="text-black underline hover:underline"
                         >
                             Gallery
+                        </Link>
+                        <Link
+                              href="/materials"
+                            className="text-black underline hover:underline"
+                        >
+                            Materials
                         </Link>
                         <Link
                             href="/contactUs"
