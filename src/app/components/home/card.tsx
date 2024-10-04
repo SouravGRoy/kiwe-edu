@@ -12,7 +12,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, description, imageSrc }) => {
   return (
-    <div className="flex-col bg-white shadow-lg border-t-2 p-5 rounded-lg flex h-[350px]"> {/* Fixed height */}
+    <div className="flex-col bg-white shadow-lg border-t-2 p-5 rounded-lg flex h-[400px]"> {/* Fixed height */}
       <div className="feature-icon inline-flex items-center justify-start text-primary text-2xl mb-3">
         <Image
           src={imageSrc}
@@ -47,21 +47,21 @@ export default function Cards() {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="md:my-20 mt-10 md:mb-0 mb-10">
               <Card
-                title="REGULAR-"
+                title="REGULAR (6-10)"
                 description="This Course offers education for students pursuing Science, Arts, or Commerce streams, providing in-depth academic preparation from April to February...."
                 imageSrc={"/images/s1.jpg"}
               />
             </div>
             <div className="md:my-20 md:mb-0 mb-10">
               <Card
-                title="REGULAR-"
+                title="REGULAR (10-12 ICSE AND CBSE)"
                 description="This intensive course is designed for students in their final academic year of Grades 10 and 12, providing focused preparation in Science, Arts, or Commerce streams..."
                 imageSrc={"/images/s2.jpg"}
               />
             </div>
             <div className="md:my-20 ">
               <Card
-                title="CRASH COURSE"
+                title="CRASH COURSE (ICSE AND CBSE)"
                 description="This crash course is designed for students in Grades 10 and 12, for revision of the Science, Arts, or Commerce. Spanning from December to early February..."
                 imageSrc={"/images/s3.jpg"}
               />

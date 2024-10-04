@@ -70,5 +70,17 @@ export const content: contentType[] = [
           "This comprehensive program is tailored for students who have completed their 12th grade and are aiming to crack both Neet Entrance Exam. The course offers in-depth preparation, covering all essential topics, concepts, and strategies to help students achieve top ranks in India's premier engineering entrance exams.",
           brochure:"",
       },
+      {
+        id: 5,
+        title: "Foundation Course",
+        course: "Foundation Course",
+        image:"/images/s6.png",
+        eligibility: "12th pass",
+        duration: "1 month",
+        
+        description:
+          "Focus on research and practical knowledge, with a curriculum designed to foster scientific curiosity and analytical skills in students.This course will have classes for 9/10 and 10/12 with Math and Science",
+          brochure:"",
+      },
 
 ];
