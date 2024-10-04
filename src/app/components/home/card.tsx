@@ -12,8 +12,8 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, description, imageSrc }) => {
   return (
-    <div className="flex-col bg-white shadow-lg border-t-2 p-5 rounded-lg flex ">
-      <div className="feature-icon inline-flex items-center justify-start text-primary  text-2xl mb-3">
+    <div className="flex-col bg-white shadow-lg border-t-2 p-5 rounded-lg flex h-[350px]"> {/* Fixed height */}
+      <div className="feature-icon inline-flex items-center justify-start text-primary text-2xl mb-3">
         <Image
           src={imageSrc}
           width={100}
@@ -25,10 +25,10 @@ const Card: React.FC<CardProps> = ({ title, description, imageSrc }) => {
       <h3 className="text-2xl font-bold mb-2 underline text-gray-900">
         {title}
       </h3>
-      <p>{description}</p>
+      <p className="flex-shrink">{description}</p> {/* Makes description take up available space */}
       <a
         href="/coursesUs"
-        className="icon-link text-blue-500 inline-flex items-center"
+        className="icon-link text-blue-500 inline-flex items-center mt-8"  
       >
         Read More
         <svg className="bi w-4 h-4 ml-2" fill="currentColor">
@@ -48,37 +48,21 @@ export default function Cards() {
             <div className="md:my-20 mt-10 md:mb-0 mb-10">
               <Card
                 title="REGULAR-"
-                description="This Course offers education for students pursuing Science, Arts, or Commerce streams, providing in-depth academic preparation from April to February.... 
-
-
-
-
-"
+                description="This Course offers education for students pursuing Science, Arts, or Commerce streams, providing in-depth academic preparation from April to February...."
                 imageSrc={"/images/s1.jpg"}
               />
             </div>
             <div className="md:my-20 md:mb-0 mb-10">
               <Card
                 title="REGULAR-"
-                description="This intensive course is designed for students in their final academic year of Grades 10 and 12, providing focused preparation in Science, Arts, or Commerce streams...
-
-
-
-
-
-
-
-
-
-"
+                description="This intensive course is designed for students in their final academic year of Grades 10 and 12, providing focused preparation in Science, Arts, or Commerce streams..."
                 imageSrc={"/images/s2.jpg"}
               />
             </div>
             <div className="md:my-20 ">
               <Card
                 title="CRASH COURSE"
-                description="This crash course is designed for students in Grades 10 and 12, offering an accelerated and focused revision of the Science, Arts, or Commerce syllabus.Spanning from December to early February...
-"
+                description="This crash course is designed for students in Grades 10 and 12, for revision of the Science, Arts, or Commerce. Spanning from December to early February..."
                 imageSrc={"/images/s3.jpg"}
               />
             </div>
