@@ -12,13 +12,20 @@ export function NoticesBar({ notices }: PageProps) {
     return (
         <Marquee className="py-1" autoFill pauseOnHover>
             {notices.map((notice) => (
-                <Link
+                <div
                     key={notice.id}
-                    href={notice.url}
-                    className="mr-4 text-sm text-black/60 hover:text-blue-500 hover:underline"
+                    className="mr-2 flex items-center gap-2 text-black/60"
                 >
-                    {notice.name.split(".")[0]}
-                </Link>
+                    <Link
+                        key={notice.id}
+                        href={notice.url}
+                        className="text-sm text-black/60 hover:text-blue-500 hover:underline"
+                    >
+                        <span>{notice.name.split(".")[0]}</span>
+                    </Link>
+
+                    <span>•</span>
+                </div>
             ))}
         </Marquee>
     );
