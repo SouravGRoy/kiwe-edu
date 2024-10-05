@@ -1,4 +1,3 @@
-import { categories } from "@/config/category";
 import {
     ACCEPTED_DOC_TYPES,
     DEFAULT_ERROR_MESSAGE,
@@ -6,7 +5,7 @@ import {
     UPLOADER_COOKIE_NAME,
 } from "@/config/const";
 import { utapi } from "@/lib/uploadthing";
-import { generateFileName, generateId } from "@/lib/utils";
+import { generateNoticeFileName } from "@/lib/utils";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -19,8 +18,6 @@ export async function POST(req: NextRequest) {
         const uploadKey = cookieStore.get(UPLOADER_COOKIE_NAME)?.value;
 
         const file = body.get("file");
-        const category = body.get("category");
-        const subCategory = body.get("subCategory");
 
         if (!uploadKey || typeof uploadKey !== "string" || !uploadKey.length)
             return NextResponse.json(
@@ -62,66 +59,6 @@ export async function POST(req: NextRequest) {
                 }
             );
 
-        if (!category || typeof category !== "string" || !category.length)
-            return NextResponse.json(
-                {
-                    success: false,
-                    message: "BAD_REQUEST",
-                    longMessage: "A category is required!",
-                },
-                {
-                    status: 400,
-                    statusText: "Bad Request",
-                }
-            );
-
-        if (!categories.find((c) => c.value === category))
-            return NextResponse.json(
-                {
-                    success: false,
-                    message: "BAD_REQUEST",
-                    longMessage: "Invalid category!",
-                },
-                {
-                    status: 400,
-                    statusText: "Bad Request",
-                }
-            );
-
-        if (
-            !subCategory ||
-            typeof subCategory !== "string" ||
-            !subCategory.length
-        )
-            return NextResponse.json(
-                {
-                    success: false,
-                    message: "BAD_REQUEST",
-                    longMessage: "A class is required!",
-                },
-                {
-                    status: 400,
-                    statusText: "Bad Request",
-                }
-            );
-
-        if (
-            !Array.from({ length: 6 })
-                .map((_, i) => i + 7)
-                .includes(+subCategory)
-        )
-            return NextResponse.json(
-                {
-                    success: false,
-                    message: "BAD_REQUEST",
-                    longMessage: "Invalid class!",
-                },
-                {
-                    status: 400,
-                    statusText: "Bad Request",
-                }
-            );
-
         if (!ACCEPTED_DOC_TYPES.includes(file.type))
             return NextResponse.json(
                 {
@@ -148,7 +85,7 @@ export async function POST(req: NextRequest) {
                 }
             );
 
-        const fileName = generateFileName(file.name, category, subCategory);
+        const fileName = generateNoticeFileName(file.name);
 
         const res = await utapi.uploadFiles(file);
         if (res.error)
@@ -168,17 +105,6 @@ export async function POST(req: NextRequest) {
             fileKey: res.data.key,
             newName: fileName,
         });
-
-        // const filePath = `public/uploads/${category}/${filename}`;
-
-        // try {
-        //     await fs.stat(`public/uploads/${category}`);
-        // } catch (err) {
-        //     await fs.mkdir(`public/uploads/${category}`, { recursive: true });
-        // }
-
-        // const fileBuffer = Buffer.from(await file.arrayBuffer());
-        // await fs.writeFile(filePath, new Uint8Array(fileBuffer));
 
         return NextResponse.json(
             {

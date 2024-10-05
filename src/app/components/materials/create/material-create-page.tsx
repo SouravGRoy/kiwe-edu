@@ -80,7 +80,7 @@ export function MaterialCreatePage() {
             formData.append("category", category);
             formData.append("subCategory", subCategory);
 
-            const res = await fetch("/api/uploads", {
+            const res = await fetch("/api/uploads/materials", {
                 method: "POST",
                 body: formData,
             });
