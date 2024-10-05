@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 import { useMutation } from "@tanstack/react-query";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ElementRef, useEffect, useRef, useState } from "react";
+import React, { ElementRef, useEffect, useRef, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { toast } from "sonner";
 
@@ -40,6 +40,8 @@ export function MaterialCreatePage() {
 
     const handleUpload = (e: UploadEvent) => {
         const { message, type, data, isError } = processFiles(e);
+
+        console.log(message);
 
         if (isError) return toast.error(message);
         if (!type) return toast.error("No file selected");
@@ -175,6 +177,7 @@ export function MaterialCreatePage() {
                                     accept={uploadConfig.acceptedDocTypes.join(
                                         ","
                                     )}
+                                    max={uploadConfig.maxDocFileSize}
                                     multiple={
                                         uploadConfig.maxDocCount > 1
                                             ? true
@@ -206,17 +209,32 @@ export function MaterialCreatePage() {
                                 </p>
 
                                 {!material && (
-                                    <Button
-                                        className="font-semibold"
-                                        size="sm"
-                                        onClick={() =>
-                                            fileInputRef.current.click()
-                                        }
-                                    >
-                                        {isDragging
-                                            ? "Drop the files here"
-                                            : "Choose material"}
-                                    </Button>
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Button
+                                            className="font-semibold"
+                                            size="sm"
+                                            onClick={() =>
+                                                fileInputRef.current.click()
+                                            }
+                                        >
+                                            {isDragging
+                                                ? "Drop the files here"
+                                                : "Choose material"}
+                                        </Button>
+
+                                        <p className="text-xs text-black/60">
+                                            (Max{" "}
+                                            {Intl.NumberFormat("en", {
+                                                notation: "compact",
+                                                maximumFractionDigits: 1,
+                                            }).format(
+                                                uploadConfig.maxDocFileSize /
+                                                    1024 /
+                                                    1024
+                                            )}
+                                            MB, PDF only)
+                                        </p>
+                                    </div>
                                 )}
                             </div>
 
