@@ -70,9 +70,9 @@ export default function LandingService() {
             <p className="text-gray-600 mb-4">
               By connecting students all over the world to the best instructors.
             </p>
-            <a href="#" className="text-blue-500 font-semibold">
+            {/* <a href="#" className="text-blue-500 font-semibold">
               LEARN MORE
-            </a>
+            </a> */}
           </div>
           <div className="bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="mb-4 flex items-center justify-center">
@@ -84,9 +84,9 @@ export default function LandingService() {
             <p className="text-gray-600 mb-4">
               By connecting students all over the world to the best instructors.
             </p>
-            <a href="#" className="text-blue-500 font-semibold">
+            {/* <a href="#" className="text-blue-500 font-semibold">
               LEARN MORE
-            </a>
+            </a> */}
           </div>
           <div className="bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="mb-4 flex items-center justify-center">
@@ -98,9 +98,9 @@ export default function LandingService() {
             <p className="text-gray-600 mb-4">
               By connecting students all over the world to the best instructors.
             </p>
-            <a href="#" className="text-blue-500 font-semibold">
+            {/* <a href="#" className="text-blue-500 font-semibold">
               LEARN MORE
-            </a>
+            </a> */}
           </div>
           <div className="bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="mb-4 flex items-center justify-center">
@@ -112,9 +112,9 @@ export default function LandingService() {
             <p className="text-gray-600 mb-4">
               By connecting students all over the world to the best instructors.
             </p>
-            <a href="#" className="text-blue-500 font-semibold">
+            {/* <a href="#" className="text-blue-500 font-semibold">
               LEARN MORE
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
