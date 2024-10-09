@@ -17,17 +17,55 @@ const Footer = () => {
             </p>
             <ul>
               <li className="flex items-center mb-2">
-               
-             ● Champasari Rd, Ward 46, 734003
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M16 8v10M8 8v10m8-5H8"
+                  />
+                </svg>
+                Champasari Rd, Ward 46, 734003
               </li>
               <li className="flex items-center mb-2">
-               
-              ●    +91 7718474501 / 77184 74501 / 9800740115
-
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M16 8v10M8 8v10m8-5H8"
+                  />
+                </svg>
+                +44 300 303 0266
               </li>
               <li className="flex items-center">
-              
-              ●    Mon - Sat 8.00 - 18.00
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M16 8v10M8 8v10m8-5H8"
+                  />
+                </svg>
+                Mon - Sat 8.00 - 18.00
               </li>
             </ul>
           </div>
@@ -38,7 +76,7 @@ const Footer = () => {
             <ul>
               <li className="mb-2">Regular Course - (ICSE,ISC AND CBSE)</li>
               <li className="mb-2">Crash Course - (ICSE,ISC AND CBSE)</li>
-            
+              <li className="mb-2">Admission fee: Rs. 2000</li>
             </ul>
           </div>
 
@@ -46,7 +84,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h4 className="text-xl font-bold mb-4">Support :</h4>
             <div className="flex flex-col">
-              <Link href="/aboutUs" className="mb-2  hover:text-red-500">
+              <Link href="/about" className="mb-2  hover:text-red-500">
                 About Us
               </Link>
               <Link href="/contactUs" className="mb-2  hover:text-red-500">
@@ -90,9 +128,15 @@ const Footer = () => {
 
           <div className="flex items-center">
             <div className="flex space-x-2">
-            <Link href={"https://www.instagram.com/dnatoms?igsh=bGR1Z3FuZXFkcXN6"}>  <FaInstagram /></Link>     
-                       <Link href={"https://m.facebook.com/100092304222336/"}> <FaFacebook /></Link>
-                       
+              <a href="#" className="text-gray-400 hover:text-white">
+                <FaFacebook />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <FaYoutube />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <FaInstagram />
+              </a>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Material } from "@/types";
+import { Material, Notice } from "@/types";
 import { init } from "@paralleldrive/cuid2";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -78,28 +78,62 @@ export function generateFileName(
     );
 }
 
-export function generateFileMetadataFromFile(file: {
+export function generateNoticeFileName(originalFileName: string) {
+    const createdAt = Date.now();
+
+    return (
+        "imp_" +
+        originalFileName
+            .split(".")[0]
+            .replace(/[_\s.]/g, "-")
+            .toLowerCase() +
+        "_" +
+        generateId() +
+        "_" +
+        createdAt +
+        "." +
+        originalFileName.split(".")[1]
+    );
+}
+
+export function generateFileMetadataFromFile<
+    T extends Material | Notice,
+>(file: {
     name: string;
     customId: string | null;
     key: string;
     status: "Deletion Pending" | "Failed" | "Uploaded" | "Uploading";
     id: string;
-}): Material {
+}): T {
     const splittedFileName = file.name.split(".")[0].split("_");
 
-    const id = file.key;
-    const name = file.name;
-    const category = splittedFileName[1];
-    const subCategory = splittedFileName[2];
-    const createdAt = new Date(+splittedFileName[4]);
-    const url = `https://utfs.io/f/${file.key}`;
+    if (splittedFileName[0] === "imp") {
+        const id = file.key;
+        const name = file.name;
+        const createdAt = new Date(+splittedFileName[3]);
+        const url = `https://utfs.io/f/${file.key}`;
 
-    return {
-        id,
-        name,
-        category,
-        subCategory,
-        url,
-        createdAt,
-    };
+        return {
+            id,
+            name,
+            url,
+            createdAt,
+        } as T;
+    } else {
+        const id = file.key;
+        const name = file.name;
+        const category = splittedFileName[1];
+        const subCategory = splittedFileName[2];
+        const createdAt = new Date(+splittedFileName[4]);
+        const url = `https://utfs.io/f/${file.key}`;
+
+        return {
+            id,
+            name,
+            category,
+            subCategory,
+            url,
+            createdAt,
+        } as T;
+    }
 }

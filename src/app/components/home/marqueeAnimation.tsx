@@ -7,79 +7,79 @@ const reviews = [
     name: "Gaurav Pradhan",
     username: "92.20%",
     body: "St. Joseph's School North Point Darjeeling",
-    img: "/images/gourav.png",
+    img: "https://avatar.vercel.sh/jack",
   },
   {
     name: "Yash Prasad",
     username: "90.4%",
     body: "Delhi Public School Siliguri",
-    img: "/images/yash.png",
+    img: "https://avatar.vercel.sh/jill",
   },
   {
     name: "Anshuman Limbu",
     username: "86.75%",
     body: "Vidya Vikash Academy School Darjeeling",
-    img: "/images/anshuman.png",
+    img: "https://avatar.vercel.sh/john",
   },
   {
     name: "Ankur Kumar",
     username: "85%",
     body: "Woodridge International School Siliguri",
-    img: "/images/ankur.png",
+    img: "https://avatar.vercel.sh/jane",
   },
   {
     name: "Ellora Gupta",
     username: "84.5%",
     body: "St. Joseph's High School Siliguri",
-    img: "/images/ellora.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Aditya Ghosh",
     username: "94%%",
     body: "Mahbert High School Siliguri",
-    img: "/images/aditya.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Shanvi Rauth",
     username: "92%",
     body: "Mahbert High School Siliguri",
-    img: "/images/shanvi.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Deepshikha Upadhyay",
     username: "91%%",
     body: "Lincolns High School Siliguri",
-    img: "/images/deepshikha.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Prayag Upadhaya ",
     username: "89.6%%",
     body: "Mahbert High School Siliguri",
-    img: "/images/prayag.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Lhundup Tshering Lama Khaiba",
     username: "85.7%",
     body: "Goethals Memorial School Kurseong",
-    img: "/images/lhundup.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Subh Jaiswal",
     username: "85.4%",
     body: "Birla Divya Jyoti Siliguri",
-    img: "/images/subh.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Binayak Chhetri ",
     username: "82.4%",
     body: "Don Bosco School Siliguri",
-    img: "/images/binayak.png",
+    img: "https://avatar.vercel.sh/james",
   },
   {
     name: "Koyel Ghosh",
     username: "81.4%",
     body: "Mahbert High School Siliguri",
-    img: "/images/koyel.png",
+    img: "https://avatar.vercel.sh/james",
   },
 ];
 
@@ -135,7 +135,7 @@ const MarqueeAnimation = () => {
           <div className="rounded-full w-2 h-2 bg-green-300 mr-2"></div>
           <p className="text-base text-slate-400 font-semibold">DNAtoms</p>
         </div>
-        <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight  text-zinc-900 md:text-4xl lg:text-4xl ">
+        <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight font-semibold text-zinc-900 md:text-4xl lg:text-4xl ">
           Why US ?
         </h1>
         <p className=" text-lg w-3/4 text-center font-normal text-gray-500 lg:text-base sm:px-16 xl:px-48 dark:text-gray-400">

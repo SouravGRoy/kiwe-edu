@@ -26,7 +26,8 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import { categories } from "@/config/category";
-import { convertValueToLabel } from "@/lib/utils";
+import { UploadEvent, useDropzone } from "@/hooks/dropzone";
+import { cn, convertValueToLabel } from "@/lib/utils";
 import { Material } from "@/types";
 import { useMutation } from "@tanstack/react-query";
 import {
@@ -44,7 +45,7 @@ import {
 import { format } from "date-fns";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { ElementRef, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { MaterialAction } from "./material-action";
 import { DataTablePagination } from "./pagination";
@@ -116,9 +117,19 @@ const columns: ColumnDef<TableMaterial>[] = [
 ];
 
 export function MaterialsTable({ materials, isAuth }: PageProps) {
+    const router = useRouter();
+
+    const { processFiles, uploadConfig } = useDropzone();
+    const [isDragging, setIsDragging] = useState(false);
+
+    const fileInputRef = useRef<ElementRef<"input">>(null!);
+
+    const [notice, setNotice] = useState<ExtendedFile>();
+
     const [uploadKey, setUploadKey] = useState("");
     const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-    const router = useRouter();
+    const [isUploadNoticeModalOpen, setIsUploadNoticeModalOpen] =
+        useState(false);
 
     const [sorting, setSorting] = useState<SortingState>([]);
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -126,6 +137,30 @@ export function MaterialsTable({ materials, isAuth }: PageProps) {
         {}
     );
     const [rowSelection, setRowSelection] = useState({});
+
+    const handleUpload = (e: UploadEvent) => {
+        const { message, type, data, isError } = processFiles(e);
+
+        console.log(message);
+
+        if (isError) return toast.error(message);
+        if (!type) return toast.error("No file selected");
+
+        setIsDragging(false);
+
+        if (type !== "doc") return;
+
+        if (data) {
+            if (data.acceptedFiles.length > uploadConfig.maxDocCount)
+                return toast.error(
+                    "You can only upload up to " +
+                        uploadConfig.maxDocCount +
+                        " docs"
+                );
+
+            setNotice(data.acceptedFiles[0]);
+        }
+    };
 
     const table = useReactTable({
         data: materials,
@@ -174,6 +209,42 @@ export function MaterialsTable({ materials, isAuth }: PageProps) {
             return toast.error(error.message, { id: ctx?.toastId });
         },
     });
+
+    const {
+        mutate: createNotice,
+        isSuccess,
+        isPending: isNoticeCreating,
+    } = useMutation({
+        onMutate: () => {
+            const toastId = toast.loading("Creating notice...");
+            return { toastId };
+        },
+        mutationFn: async () => {
+            if (!notice) throw new Error("Invalid data");
+
+            const formData = new FormData();
+            formData.append("file", notice.file);
+
+            const res = await fetch("/api/uploads/notices", {
+                method: "POST",
+                body: formData,
+            });
+
+            const data = await res.json();
+            if (!data.success) throw new Error(data.longMessage);
+        },
+        onSuccess: (_, __, { toastId }) => {
+            toast.success("Notice created successfully", { id: toastId });
+            router.refresh();
+        },
+        onError: (err, _, ctx) => {
+            return toast.error(err.message, { id: ctx?.toastId });
+        },
+    });
+
+    useEffect(() => {
+        if (isSuccess) setNotice(undefined);
+    }, [isSuccess]);
 
     return (
         <>
@@ -257,7 +328,21 @@ export function MaterialsTable({ materials, isAuth }: PageProps) {
                             </div>
                         </div>
 
-                        <div>
+                        <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="flex items-center gap-1"
+                                onClick={
+                                    isAuth
+                                        ? () => setIsUploadNoticeModalOpen(true)
+                                        : () => setIsAddModalOpen(true)
+                                }
+                            >
+                                <Icons.plus className="size-4" />
+                                <span>Add Notice</span>
+                            </Button>
+
                             <Button
                                 variant="outline"
                                 size="sm"
@@ -364,6 +449,130 @@ export function MaterialsTable({ materials, isAuth }: PageProps) {
                             onClick={() => validate()}
                         >
                             {isValidating ? "Validating..." : "Validate"}
+                        </Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
+
+            <Dialog
+                open={isUploadNoticeModalOpen}
+                onOpenChange={setIsUploadNoticeModalOpen}
+            >
+                <DialogContent>
+                    <DialogHeader>
+                        <DialogTitle>Notices</DialogTitle>
+                        <DialogDescription>Add a new notice</DialogDescription>
+                    </DialogHeader>
+
+                    <div
+                        className={cn(
+                            "flex min-h-80 cursor-pointer flex-col items-center justify-center gap-3 rounded-lg border border-dashed p-5 md:gap-4",
+                            isDragging && "bg-muted"
+                        )}
+                        onDragOver={(e) => {
+                            e.preventDefault();
+                            setIsDragging(true);
+                        }}
+                        onDragLeave={(e) => {
+                            e.preventDefault();
+                            setIsDragging(false);
+                        }}
+                        onDrop={handleUpload}
+                        onPaste={handleUpload}
+                        onClick={() => fileInputRef.current.click()}
+                    >
+                        <input
+                            type="file"
+                            ref={fileInputRef}
+                            onChange={handleUpload}
+                            className="hidden"
+                            accept={uploadConfig.acceptedDocTypes.join(",")}
+                            max={uploadConfig.maxDocFileSize}
+                            multiple={
+                                uploadConfig.maxDocCount > 1 ? true : false
+                            }
+                        />
+
+                        {notice ? (
+                            <div className="size-full overflow-hidden rounded-sm">
+                                <object
+                                    data={notice.url}
+                                    type="application/pdf"
+                                    width="100%"
+                                    height="600"
+                                >
+                                    <p>
+                                        <Link href={notice.url}>
+                                            Download your notice
+                                        </Link>
+                                    </p>
+                                </object>
+                            </div>
+                        ) : null}
+
+                        <p className="text-muted-foreground text-sm">
+                            {isDragging
+                                ? "Drop the file here"
+                                : "Drag and drop or click to upload your notice"}
+                        </p>
+
+                        {!notice && (
+                            <div className="flex flex-col items-center gap-2">
+                                <Button
+                                    className="font-semibold"
+                                    size="sm"
+                                    onClick={() => fileInputRef.current.click()}
+                                >
+                                    {isDragging
+                                        ? "Drop the files here"
+                                        : "Choose notice"}
+                                </Button>
+
+                                <p className="text-xs text-black/60">
+                                    (Max{" "}
+                                    {Intl.NumberFormat("en", {
+                                        notation: "compact",
+                                        maximumFractionDigits: 1,
+                                    }).format(
+                                        uploadConfig.maxDocFileSize /
+                                            1024 /
+                                            1024
+                                    )}
+                                    MB, PDF only)
+                                </p>
+                            </div>
+                        )}
+                    </div>
+
+                    <DialogFooter
+                        className={cn(
+                            "justify-end gap-2",
+                            !notice && "p-0 opacity-0"
+                        )}
+                    >
+                        <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => setNotice(undefined)}
+                            disabled={isNoticeCreating}
+                            className={cn(
+                                "font-semibold",
+                                !notice && "pointer-events-none h-0"
+                            )}
+                        >
+                            Cancel
+                        </Button>
+
+                        <Button
+                            size="sm"
+                            onClick={() => createNotice()}
+                            disabled={!notice || isNoticeCreating}
+                            className={cn(
+                                "font-semibold",
+                                !notice && "pointer-events-none h-0"
+                            )}
+                        >
+                            {isNoticeCreating ? "Creating..." : "Create"}
                         </Button>
                     </DialogFooter>
                 </DialogContent>

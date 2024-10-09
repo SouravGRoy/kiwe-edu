@@ -38,14 +38,23 @@ const ContactTab = () => (
                   At DNAtoms Institute, we blend theory with practice through
                   interactive labs and real-world projects.
                 </p>
-                <p
-                
-                  className="mt-3 text-sm text-indigo-500 inline-flex items-center"
+                <a
+                  href="/aboutUs"
+                  className="mt-3 text-indigo-500 inline-flex items-center"
                 >
-                  Phone Number →
-               
-                <span className="text-red-700">+91-7718474501 / 77184 74501 / 9800740115</span>  
-                </p>
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -75,15 +84,23 @@ const ContactTab = () => (
                   Learn from leaders and experts with strong industry ties,
                   ensuring relevant and practical education.
                 </p>
-                <p
-                 
-                  className="mt-3 text-sm  text-indigo-500 inline-flex items-center"
-
-                >Address → 
-                <span className="text-red-700 px-3"> Champasari Rd, Ward 46, 734003</span>
-                 
-                 
-                </p>
+                <a
+                  href="/aboutUs"
+                  className="mt-3 text-indigo-500 inline-flex items-center"
+                >
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -114,13 +131,23 @@ const ContactTab = () => (
                   Our inclusive environment fosters collaboration and provides
                   resources to help every student succeed.
                 </p>
-                <p
-                 
-                  className="mt-3  text-indigo-500 inline-flex items-center"
+                <a
+                  href="/aboutUs"
+                  className="mt-3 text-indigo-500 inline-flex items-center"
                 >
-                 Email →
-                 <span className="text-red-700 px-3"> dnatomsinstitute@gmail.com</span>
-                </p>
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

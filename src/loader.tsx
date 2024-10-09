@@ -12,7 +12,7 @@ export default function Loader() {
                 alt="logo"
                 className="rounded-full"
             />
-            <h1 className="mt-3 text-lg font-bold">We are loading !</h1>
+            <h1 className="mt-3 text-lg font-bold">We are loading!</h1>
         </div>
     );
 }

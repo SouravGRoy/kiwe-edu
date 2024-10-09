@@ -1,20 +1,22 @@
 // components/Layout.tsx
 import React, { ReactNode } from "react";
-import Navbar from "./home/navbar";
 import Footer from "./home/footer";
+import Navbar from "./home/navbar";
+import { NoticesFetch } from "./notices-fetch";
 
 interface LayoutProps {
-  children: ReactNode;
+    children: ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Navbar />
+            <NoticesFetch />
+            <main>{children}</main>
+            <Footer />
+        </div>
+    );
 };
 
 export default Layout;

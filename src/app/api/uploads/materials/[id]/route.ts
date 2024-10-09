@@ -1,12 +1,22 @@
 import { DEFAULT_ERROR_MESSAGE, UPLOADER_COOKIE_NAME } from "@/config/const";
+import { utapi } from "@/lib/uploadthing";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextRequest) {
-    try {
-        const body = await req.json();
+interface Props {
+    params: {
+        id: string;
+    };
+}
 
-        const { uploadKey } = body;
+export async function DELETE(req: NextRequest, { params }: Props) {
+    try {
+        const id = params.id;
+
+        const cookieStore = cookies();
+
+        const uploadKey = cookieStore.get(UPLOADER_COOKIE_NAME)?.value;
+
         if (!uploadKey || typeof uploadKey !== "string" || !uploadKey.length)
             return NextResponse.json(
                 {
@@ -34,13 +44,32 @@ export async function POST(req: NextRequest) {
                 }
             );
 
-        const cookieStore = cookies();
-        cookieStore.set(UPLOADER_COOKIE_NAME, UPLOAD_KEY_ENV, {
-            httpOnly: true,
-            secure: true,
-            sameSite: "strict",
-            maxAge: 60 * 60 * 24, // 1 day
-        });
+        if (!id || typeof id !== "string" || !id.length)
+            return NextResponse.json(
+                {
+                    success: false,
+                    message: "BAD_REQUEST",
+                    longMessage: "An id is required!",
+                },
+                {
+                    status: 400,
+                    statusText: "Bad Request",
+                }
+            );
+
+        const res = await utapi.deleteFiles([id]);
+        if (!res.success)
+            return NextResponse.json(
+                {
+                    success: false,
+                    message: "NOT_FOUND",
+                    longMessage: "Material not found!",
+                },
+                {
+                    status: 404,
+                    statusText: "Bad Request",
+                }
+            );
 
         return NextResponse.json(
             {
