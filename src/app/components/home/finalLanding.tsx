@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import SmallVideoPlayer from "./smallVideoPlayer";
 
@@ -24,37 +25,48 @@ export default function FinalLanding() {
                     transition={{ duration: 0.9 }}
                     className="z-20 flex flex-col items-center pt-16 text-center md:py-32"
                 >
-                    <div className="mb-6 flex rounded-full bg-white px-2 py-1 shadow-md">
-                        <div className="my-2 mr-1 h-1 w-1 rounded-full bg-green-300 md:h-2 md:w-2"></div>
-                        <p className="text-sm text-slate-400 md:text-base">
+                    {/* Notification Text */}
+                    <div className="mb-6 flex rounded-full bg-white px-4 py-2 shadow-md">
+                        <div className="my-2 mr-2 h-2 w-2 rounded-full bg-green-300 md:h-3 md:w-3"></div>
+                        <p className="text-md text-slate-400 md:text-lg">
                             Premium Class with Absolute faculty
                         </p>
                     </div>
-                    <h1 className="mb-2 text-4xl font-bold md:text-5xl">
+
+                    {/* Heading */}
+                    <h1 className="mb-4 text-5xl font-bold md:text-7xl">
                         DNAtom&apos;s
                     </h1>
-                    <p className="text-4xl font-bold text-secondary md:text-5xl">
+                    <p className="text-4xl font-bold text-secondary md:text-6xl">
                         Institute
                     </p>
-                    <p className="md:text-md mt-2 text-start text-sm">
+
+                    {/* Subtitle */}
+                    <p className="text-md mt-4 text-start md:text-center md:text-lg">
                         &quot;Inspiring excellence through innovative
                         education.&quot;
                     </p>
-                    <div className="z-30 mt-8 flex space-x-3 px-2">
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="mb-2 text-base text-zinc-900 backdrop-blur-sm hover:text-white"
-                        >
-                            View Programs
-                        </Button>
-                        <Button
-                            size={"lg"}
-                            variant="secondary"
-                            className="rounded text-lg font-bold text-white md:px-5"
-                        >
-                            Enroll Now
-                        </Button>
+
+                    {/* Buttons */}
+                    <div className="z-30 mt-8 flex space-x-4 px-2">
+                        <Link href="/coursesUs">
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                className="mb-2 text-base text-zinc-900 backdrop-blur-sm hover:text-white md:text-lg"
+                            >
+                                View Programs
+                            </Button>
+                        </Link>
+                        <Link href={"/contactUs"}>
+                            <Button
+                                size={"lg"}
+                                variant="secondary"
+                                className="rounded text-lg font-bold text-white md:px-6 md:text-xl"
+                            >
+                                Enroll Now
+                            </Button>
+                        </Link>
                     </div>
                 </motion.div>
 
