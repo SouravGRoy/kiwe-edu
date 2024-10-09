@@ -30,7 +30,7 @@ export function MaterialAction({ material }: PageProps) {
             return { toastId };
         },
         mutationFn: async () => {
-            const res = await fetch(`/api/uploads/materials/${material.id}`, {
+            const res = await fetch(`/api/uploads/${material.id}`, {
                 method: "DELETE",
             });
 

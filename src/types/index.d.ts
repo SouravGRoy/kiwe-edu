@@ -13,10 +13,3 @@ export type Material = {
     url: string;
     createdAt: Date;
 };
-
-export type Notice = {
-    id: string;
-    name: string;
-    url: string;
-    createdAt: Date;
-};
