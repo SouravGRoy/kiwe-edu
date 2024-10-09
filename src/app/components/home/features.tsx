@@ -1,112 +1,122 @@
 import React from "react";
 import {
-  FaRocket,
-  FaBook,
-  FaStar,
-  FaSyncAlt,
-  FaBullseye,
-  FaChartLine,
+    FaBook,
+    FaBullseye,
+    FaChartLine,
+    FaRocket,
+    FaStar,
+    FaSyncAlt,
 } from "react-icons/fa";
 
 export default function Features() {
-  const features = [
-    {
-      icon: (
-        <FaRocket
-          size={40}
-          className="text-secondary hover:text-white transition duration-300"
-        />
-      ),
-      title: "Experienced Faculty",
-      description:
-        "Learn from industry experts with years of teaching experience.",
-    },
-    {
-      icon: (
-        <FaBook
-          size={40}
-          className="text-secondary hover:text-white transition duration-300"
-        />
-      ),
-      title: "State-of-the-Art Facilities",
-      description:
-        "Modern classrooms and labs equipped with the latest technology.",
-    },
-    {
-      icon: (
-        <FaStar
-          size={40}
-          className="text-secondary hover:text-white transition duration-300"
-        />
-      ),
-      title: "Comprehensive Curriculum",
-      description:
-        "Holistic programs designed to meet industry standards and trends.",
-    },
-    {
-      icon: (
-        <FaSyncAlt
-          size={40}
-          className="text-secondary hover:text-white transition duration-300"
-        />
-      ),
-      title: "Flexible Learning Options",
-      description: "Online, offline, and hybrid courses to fit your schedule.",
-    },
-    {
-      icon: (
-        <FaBullseye
-          size={40}
-          className="text-secondary hover:text-white transition duration-300"
-        />
-      ),
-      title: "Development Programs",
-      description:
-        "Focus on academic, extracurricular, and personal growth for students.",
-    },
-    {
-      icon: (
-        <FaChartLine
-          size={40}
-          className="text-secondary hover:text-white transition duration-300"
-        />
-      ),
-      title: "Learning Environment",
-      description:
-        "Personalized guidance and resources to ensure student success.",
-    },
-  ];
+    const features = [
+        {
+            icon: (
+                <FaRocket
+                    size={40}
+                    className="text-secondary transition duration-300 hover:text-white"
+                />
+            ),
+            title: "Experienced Faculty",
+            description:
+                "Learn from industry experts with years of teaching experience.",
+        },
+        {
+            icon: (
+                <FaBook
+                    size={40}
+                    className="text-secondary transition duration-300 hover:text-white"
+                />
+            ),
+            title: "State-of-the-Art Facilities",
+            description:
+                "Modern classrooms and labs equipped with the latest technology.",
+        },
+        {
+            icon: (
+                <FaStar
+                    size={40}
+                    className="text-secondary transition duration-300 hover:text-white"
+                />
+            ),
+            title: "Comprehensive Curriculum",
+            description:
+                "Holistic programs designed to meet industry standards and trends.",
+        },
+        {
+            icon: (
+                <FaSyncAlt
+                    size={40}
+                    className="text-secondary transition duration-300 hover:text-white"
+                />
+            ),
+            title: "Flexible Learning Options",
+            description:
+                "Online, offline, and hybrid courses to fit your schedule.",
+        },
+        {
+            icon: (
+                <FaBullseye
+                    size={40}
+                    className="text-secondary transition duration-300 hover:text-white"
+                />
+            ),
+            title: "Development Programs",
+            description:
+                "Focus on academic, extracurricular, and personal growth for students.",
+        },
+        {
+            icon: (
+                <FaChartLine
+                    size={40}
+                    className="text-secondary transition duration-300 hover:text-white"
+                />
+            ),
+            title: "Learning Environment",
+            description:
+                "Personalized guidance and resources to ensure student success.",
+        },
+    ];
 
-  return (
-    <div className="flex flex-wrap justify-center md:py-20 mb-10 bg-white gap-10">
-      <div className="flex flex-col font-montserrat   justify-center items-center">
-        <div className="rounded-full bg-white mb-6 flex items-center justify-center shadow-md px-2 py-1">
-          <div className="rounded-full w-2 h-2 bg-green-300 mr-2"></div>
-          <p className="text-base text-slate-400 font-semibold">DNAtoms</p>
+    return (
+        <div className="mb-10 flex flex-col justify-center gap-10 bg-white md:py-20">
+            <div className="flex flex-col items-center justify-center font-montserrat">
+                <div className="mb-6 flex items-center justify-center rounded-full bg-white px-2 py-1 shadow-md">
+                    <div className="mr-2 h-2 w-2 rounded-full bg-green-300"></div>
+                    <p className="text-base font-semibold text-slate-400">
+                        DNAtoms
+                    </p>
+                </div>
+                <h1 className="mb-4 text-center text-4xl font-semibold leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
+                    Why US?
+                </h1>
+                <p className="w-3/4 text-center text-lg font-normal text-gray-500 sm:px-16 lg:text-base xl:px-48 dark:text-gray-400">
+                    Experience visionary education tailored to unleash your
+                    potential and prepare you for a dynamic future at Visionary
+                    Institute.
+                </p>
+            </div>
+            {/* Responsive grid layout */}
+            <div className="grid grid-cols-1 gap-10 px-10 sm:grid-cols-2 lg:grid-cols-3">
+                {features.map((feature, index) => (
+                    <div
+                        key={index}
+                        className="flex w-full max-w-md items-start p-4 text-black"
+                    >
+                        <div className="rounded-full bg-blue-100 p-4 transition duration-300 hover:bg-secondary">
+                            {feature.icon}
+                        </div>
+                        <div className="ml-4">
+                            <h3 className="text-xl font-bold">
+                                {feature.title}
+                            </h3>
+                            <p className="text-gray-600">
+                                {feature.description}
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
-        <h1 className="mb-4 text-4xl text-center   leading-none tracking-tight font-semibold text-zinc-900 md:text-4xl lg:text-4xl ">
-          Why US ?
-        </h1>
-        <p className=" text-lg w-3/4 text-center font-normal text-gray-500 lg:text-base sm:px-16 xl:px-48 dark:text-gray-400">
-          Experience visionary education tailored to unleash your potential and
-          prepare you for a dynamic future at Visionary Institute.
-        </p>
-      </div>
-
-      {features.map((feature, index) => (
-        <a
-          key={index}
-          className="flex items-start p-4 max-w-sm w-full md:w-1/3  text-black"
-        >
-          <div className="bg-blue-100 p-4 transition duration-300 hover:bg-secondary rounded-full">
-            {feature.icon}
-          </div>
-          <div className="ml-4">
-            <h3 className="text-xl font-bold">{feature.title}</h3>
-            <p className="text-gray-600">{feature.description}</p>
-          </div>
-        </a>
-      ))}
-    </div>
-  );
+    );
 }
