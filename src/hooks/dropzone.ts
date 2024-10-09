@@ -148,7 +148,7 @@ export function useDropzone() {
                 message:
                     "Could not upload " +
                     rejectedFiles.length +
-                    " image(s). Please check the file types and sizes, " +
+                    " images. Please check the file types and sizes, " +
                     rejectedFiles.map((file) => file.file.name).join(", "),
                 isError: true,
                 isSuccess: false,
@@ -209,12 +209,8 @@ export function useDropzone() {
                 message:
                     "Could not upload " +
                     rejectedFiles.length +
-                    " document(s). Only PDF files and sizes less than " +
-                    Intl.NumberFormat("en", {
-                        notation: "compact",
-                        maximumFractionDigits: 1,
-                    }).format(MAX_DOC_FILE_SIZE / 1024 / 1024) +
-                    "MB are allowed",
+                    " documents. Please check the file types and sizes, " +
+                    rejectedFiles.map((file) => file.file.name).join(", "),
                 isError: true,
                 isSuccess: false,
             };
