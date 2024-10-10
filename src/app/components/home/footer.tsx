@@ -53,7 +53,7 @@ const Footer = () => {
                                 About Us
                             </Link>
                             <Link
-                                href="/contactUs"
+                                href="/servicesUs"
                                 className="mb-2 hover:text-red-500"
                             >
                                 Services
@@ -65,13 +65,13 @@ const Footer = () => {
                                 Available Courses
                             </Link>
                             <Link
-                                href="/servicesUs"
+                                href="/testimonialUs"
                                 className="mb-2 hover:text-red-500"
                             >
                                 Testimonial
                             </Link>
                             <Link
-                                href="/gallaryUs"
+                                href="/contactUs"
                                 className="mb-2 hover:text-red-500"
                             >
                                 Contact Us
