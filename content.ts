@@ -15,10 +15,10 @@ export const content: contentType[] = [
         title: "REGULAR (6-10)",
         course: "SCIENCE, ARTS AND COMMERCE",
         image: "/images/s1.jpg",
-        eligibility: "IX AND XI",
+        eligibility: "VI AND X",
         duration: "APRIL (PRESENT YEAR) TO FEBRUARY (NEXT YEAR)",
         description:
-            " This comprehensive course offers an interdisciplinary curriculum tailored to students in Grades IX and XI, covering key concepts in Science, Arts, and Commerce. Designed to build a strong foundation, the program blends theoretical knowledge with practical insights, preparing students for advanced studies and diverse career pathways. ",
+            " This comprehensive course offers an interdisciplinary curriculum tailored to students in Grades VI and X, covering key concepts in Science, Arts, and Commerce. Designed to build a strong foundation, the program blends theoretical knowledge with practical insights, preparing students for advanced studies and diverse career pathways. ",
         brochure: "#",
     },
     {
