@@ -18,7 +18,7 @@ export const content: contentType[] = [
         eligibility: "IX AND XI",
         duration: "APRIL (PRESENT YEAR) TO FEBRUARY (NEXT YEAR)",
         description:
-            "This website features a sophisticated color palette infused with metallic accents, layered over a blue-toned gradient that creates a stylish 3D effect. This design choice enhances Shopify's product updates, fostering a serene atmosphere that sparks curiosity in viewers.",
+            " This course's website boasts an elegant design with a refined color scheme and subtle metallic highlights, layered over a blue gradient that gives a sleek, three-dimensional look. The visual elements are designed to create a calm and inviting atmosphere, encouraging students to explore and engage with the content on offer. The layout and aesthetic effectively showcase the comprehensive updates and features of the course, aiming to spark curiosity and inspire learning.",
         brochure: "#",
     },
     {
@@ -29,7 +29,7 @@ export const content: contentType[] = [
         eligibility: "X AND XII",
         duration: "APRIL TO NOVEMBER OF THE SAME YEAR",
         description:
-            "An innovative approach to technology education with hands-on experience and modern labs, providing students with the skills needed for the tech industry.",
+            "This course takes an innovative approach to education, featuring hands-on experience in state-of-the-art labs. Students gain the skills needed for various industries, combining theoretical knowledge with practical application to prepare for future challenges.",
         brochure: "#",
     },
     {
@@ -41,7 +41,7 @@ export const content: contentType[] = [
         duration: "DECEMBER (1ST WEEK) TO FEBRUARY OF NEXT YEAR (1ST WEEK)",
        
         description:
-            "Focus on research and practical knowledge, with a curriculum designed to foster scientific curiosity and analytical skills in students.",
+            "A condensed, intensive program that emphasizes research and practical knowledge. The curriculum is crafted to cultivate scientific curiosity and enhance analytical skills, equipping students with the tools needed to excel in their studies and beyond.",
         brochure: "#",
     },
     
@@ -71,7 +71,7 @@ export const content: contentType[] = [
           brochure:"",
       },
       {
-        id: 5,
+        id: 6,
         title: "Foundation Course",
         course: "Foundation Course",
         image:"/images/s6.png",
