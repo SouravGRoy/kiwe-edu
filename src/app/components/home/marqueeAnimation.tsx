@@ -138,12 +138,12 @@ const MarqueeAnimation = () => {
                     </p>
                 </div>
                 <h1 className="mb-4 text-center text-4xl leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
-                    Why US ?
+                    Testimonials
                 </h1>
                 <p className="w-3/4 text-center text-lg font-normal text-gray-500 sm:px-16 lg:text-base xl:px-48 dark:text-gray-400">
-                    Experience visionary education tailored to unleash your
-                    potential and prepare you for a dynamic future at Visionary
-                    Institute.
+                    Discover how our commitment to excellence and personalized
+                    support sets us apart, helping you reach your full potential
+                    in a thriving learning environment.
                 </p>
             </div>
             <div className="bg-background relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg py-12 md:shadow-xl">

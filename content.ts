@@ -18,7 +18,7 @@ export const content: contentType[] = [
         eligibility: "IX AND XI",
         duration: "APRIL (PRESENT YEAR) TO FEBRUARY (NEXT YEAR)",
         description:
-            " This course's website boasts an elegant design with a refined color scheme and subtle metallic highlights, layered over a blue gradient that gives a sleek, three-dimensional look. The visual elements are designed to create a calm and inviting atmosphere, encouraging students to explore and engage with the content on offer. The layout and aesthetic effectively showcase the comprehensive updates and features of the course, aiming to spark curiosity and inspire learning.",
+            " This comprehensive course offers an interdisciplinary curriculum tailored to students in Grades IX and XI, covering key concepts in Science, Arts, and Commerce. Designed to build a strong foundation, the program blends theoretical knowledge with practical insights, preparing students for advanced studies and diverse career pathways. ",
         brochure: "#",
     },
     {

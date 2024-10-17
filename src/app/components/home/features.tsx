@@ -87,13 +87,13 @@ export default function Features() {
                         DNAtoms
                     </p>
                 </div>
-                <h1 className="mb-4 text-center text-4xl font-semibold leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
+                <h1 className="mb-4 text-center text-4xl leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
                     Why US?
                 </h1>
                 <p className="w-3/4 text-center text-lg font-normal text-gray-500 sm:px-16 lg:text-base xl:px-48 dark:text-gray-400">
-                    Experience visionary education tailored to unleash your
-                    potential and prepare you for a dynamic future at Visionary
-                    Institute.
+                    We provide an inspiring learning environment that nurtures
+                    growth and innovation, empowering you to achieve your goals
+                    and excel in a rapidly evolving world.
                 </p>
             </div>
             {/* Responsive grid layout */}

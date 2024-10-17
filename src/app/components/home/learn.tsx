@@ -31,7 +31,7 @@ export default function Learn() {
                         DNAtoms{" "}
                     </p>
                 </div>
-                <h1 className="mb-4 text-center text-4xl font-semibold leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
+                <h1 className="mb-4 text-center text-4xl leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
                     Director&apos;s Word
                 </h1>
             </div>
@@ -121,7 +121,7 @@ export default function Learn() {
                         DNAtoms{" "}
                     </p>
                 </div>
-                <h1 className="mb-4 text-center text-4xl font-semibold leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
+                <h1 className="mb-4 text-center text-4xl leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
                     ADMINISTRATOR&apos;s Word
                 </h1>
             </div>
@@ -184,7 +184,7 @@ export default function Learn() {
                     </div>
                     <div className="text-center md:text-start">
                         <h1 className="py-4 text-4xl">
-                            Empowering Leaders, Innovating Tomorrow.
+                            Inspiring Innovators, Shaping the Future.
                         </h1>
                         <p className="text-base text-gray-400">
                             Every child is special in his/her own way and has
