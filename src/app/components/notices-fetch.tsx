@@ -1,9 +1,11 @@
 import { utapi } from "@/lib/uploadthing";
 import { generateFileMetadataFromFile } from "@/lib/utils";
 import { Notice } from "@/types";
+import { cookies } from "next/headers";
 import { NoticesBar } from "./notices-bar";
 
 export async function NoticesFetch() {
+    cookies();
     const files = await utapi.listFiles();
 
     const notices: Notice[] = [];
@@ -12,6 +14,7 @@ export async function NoticesFetch() {
 
     for (const file of files.files) {
         const isNotice = file.name.split("_")[0] === "imp";
+
         if (!isNotice) continue;
         notices.push(generateFileMetadataFromFile(file));
 
