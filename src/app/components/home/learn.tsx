@@ -32,7 +32,7 @@ export default function Learn() {
                     </p>
                 </div>
                 <h1 className="mb-4 text-center text-4xl leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
-                    Director&apos;s Word
+                    Founder&apos;s Word
                 </h1>
             </div>
             <div className="flex flex-col px-10 md:flex-row">
@@ -96,11 +96,13 @@ export default function Learn() {
                             Empowering Leaders, Innovating Tomorrow.
                         </h1>
                         <p className="text-base text-gray-400">
-                            Every child is special in his/her own way and has
-                            the ability and the capacity to attain his/her
-                            dream. In order to achieve those dreams children
-                            require a very strong reliable academic system which
-                            will help them to climb up the stairs to success
+                            Welcome to DNAtoms Institule , where Students come
+                            first and we believe that education has the power lo
+                            transform lives. With one dedicated faculty, we are
+                            committed lo equipping our studens with the skills,
+                            Knowledge and character lo make a meaningful Impact
+                            in the world Join us, and together, let's unlock
+                            your future
                         </p>
                     </div>
                     <Link href={"/aboutUs"}>
@@ -122,7 +124,7 @@ export default function Learn() {
                     </p>
                 </div>
                 <h1 className="mb-4 text-center text-4xl leading-none tracking-tight text-zinc-900 md:text-4xl lg:text-4xl">
-                    ADMINISTRATOR&apos;s Word
+                    Founder&apos;s Word
                 </h1>
             </div>
 
