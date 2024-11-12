@@ -157,7 +157,7 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
             <span>
                 ☁️ kiwemedia is a strategic partner for fast-grow­ing tech
                 businesses that need to raise funds, sell prod­ucts, ex­plain
-                com­plex ideas, and hire great peo­ple.
+                com­plex ideas, and hire great peo­ple
             </span>
         </a>
     </div>
