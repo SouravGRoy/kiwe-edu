@@ -104,24 +104,24 @@ export const TweetNotFound = ({
 export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
     <div className="flex flex-row justify-between tracking-tight">
         <div className="flex items-center space-x-2">
-            <a href={"https://kiwemedia.com/"} target="_blank" rel="noreferrer">
+            <a href={"https://dnatoms.in/"} target="_blank" rel="noreferrer">
                 <img
                     title={`Profile picture of ${"sourav"}`}
                     alt={tweet.user.screen_name}
                     height={48}
                     width={48}
-                    src={"/images/kiwe.jpg"}
-                    className="overflow-hidden rounded-full border border-transparent"
+                    src={"/images/logoX.png"}
+                    className="py overflow-hidden rounded-full border border-transparent bg-black object-cover py-3"
                 />
             </a>
             <div>
                 <a
-                    href={"https://kiwemedia.com/"}
+                    href={"https://dnatoms.in/"}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center whitespace-nowrap font-semibold"
                 >
-                    {truncate("kiwemedia", 20)}
+                    {truncate("DNAtoms", 20)}
                     {tweet.user.verified ||
                         (tweet.user.is_blue_verified && (
                             <Verified className="ml-1 inline h-4 w-4 text-blue-500" />
@@ -129,17 +129,17 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
                 </a>
                 <div className="flex items-center space-x-1">
                     <a
-                        href={"https://kiwemedia.com/"}
+                        href={"https://dnatoms.in/"}
                         target="_blank"
                         rel="noreferrer"
                         className="text-sm text-gray-500 transition-all duration-75"
                     >
-                        @{truncate("kiwemedia", 16)}
+                        @{truncate("DNAtoms", 16)}
                     </a>
                 </div>
             </div>
         </div>
-        <a href={"https://kiwemedia.com/"} target="_blank" rel="noreferrer">
+        <a href={"https://dnatoms.in/"} target="_blank" rel="noreferrer">
             <span className="sr-only">Link to tweet</span>
             <Twitter className="h-5 w-5 items-start text-[#3BA9EE] transition-all ease-in-out hover:scale-105" />
         </a>
@@ -149,15 +149,16 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
 export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
     <div className="break-words leading-normal tracking-tighter">
         <a
-            href={"https://kiwemedia.com/"}
+            href={"https://dnatoms.in/"}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-normal text-gray-500"
         >
             <span>
-                ☁️ kiwemedia is a strategic partner for fast-grow­ing tech
-                businesses that need to raise funds, sell prod­ucts, ex­plain
-                com­plex ideas, and hire great peo­ple.
+                ☁️ Our institute empowers students with quality education,
+                fostering critical thinking, innovation, and lifelong learning.
+                We prioritize academic excellence, skill development, and future
+                readiness.
             </span>
         </a>
     </div>
@@ -183,7 +184,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
                 {tweet.photos.map((photo) => (
                     <img
                         key={photo.url}
-                        src={"/images/kiweMedia.png"}
+                        src={"/images/Gallary20.jpeg"}
                         title={"Photo by " + tweet.user.name}
                         alt={tweet.text}
                         className="shrink-0 snap-center snap-always rounded-xl border object-cover shadow-sm md:h-64 md:w-5/6"
