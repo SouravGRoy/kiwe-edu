@@ -101,8 +101,8 @@ export default function Learn() {
                             transform lives. With one dedicated faculty, we are
                             committed lo equipping our studens with the skills,
                             Knowledge and character lo make a meaningful Impact
-                            in the world Join us, and together, let's unlock
-                            your future
+                            in the world Join us, and together, let&apos;s
+                            unlock your future
                         </p>
                     </div>
                     <Link href={"/aboutUs"}>
