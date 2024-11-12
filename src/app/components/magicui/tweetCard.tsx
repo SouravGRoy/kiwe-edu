@@ -157,12 +157,11 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
             <span>
                 ☁️ kiwemedia is a strategic partner for fast-grow­ing tech
                 businesses that need to raise funds, sell prod­ucts, ex­plain
-                com­plex ideas, and hire great peo­ple
+                com­plex ideas, and hire great peo­ple.
             </span>
         </a>
     </div>
 );
-
 export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
     <div className="flex flex-1 items-center justify-center">
         {tweet.video && (
@@ -178,7 +177,6 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
                 Your browser does not support the video tag.
             </video>
         )}
-        {/* want 3 diff images */}
         {tweet.photos && (
             <div className="relative flex transform-gpu snap-x snap-mandatory overflow-x-auto md:gap-4">
                 <div className="shrink-0 snap-center sm:w-2" />
@@ -196,13 +194,12 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
         )}
         {!tweet.video &&
             !tweet.photos &&
-            // @ts-ignore
-            tweet?.card?.binding_values?.thumbnail_image_large?.image_value
-                .url && (
+            // Here, cast `tweet.card` to `any` to allow accessing its properties
+            (tweet as any)?.card?.binding_values?.thumbnail_image_large
+                ?.image_value.url && (
                 <img
-                    // @ts-ignore
                     src={
-                        tweet.card.binding_values.thumbnail_image_large
+                        (tweet as any).card.binding_values.thumbnail_image_large
                             .image_value.url
                     }
                     className="h-64 rounded-xl border object-cover shadow-sm"
